@@ -70,9 +70,8 @@
             panel1.Dock = DockStyle.Top;
             panel1.ForeColor = Color.Coral;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(992, 27);
+            panel1.Size = new Size(868, 20);
             panel1.TabIndex = 2;
             // 
             // BtnRestaurar
@@ -86,11 +85,10 @@
             BtnRestaurar.FillColor = Color.FromArgb(190, 158, 68);
             BtnRestaurar.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
             BtnRestaurar.ForeColor = Color.White;
-            BtnRestaurar.Location = new Point(2993, 0);
-            BtnRestaurar.Margin = new Padding(3, 4, 3, 4);
+            BtnRestaurar.Location = new Point(2619, 0);
             BtnRestaurar.Name = "BtnRestaurar";
             BtnRestaurar.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            BtnRestaurar.Size = new Size(29, 23);
+            BtnRestaurar.Size = new Size(25, 17);
             BtnRestaurar.TabIndex = 7;
             BtnRestaurar.Text = "0";
             // 
@@ -105,11 +103,10 @@
             btnMinimizar.FillColor = Color.FromArgb(190, 158, 68);
             btnMinimizar.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnMinimizar.ForeColor = Color.White;
-            btnMinimizar.Location = new Point(2958, 0);
-            btnMinimizar.Margin = new Padding(3, 4, 3, 4);
+            btnMinimizar.Location = new Point(2588, 0);
             btnMinimizar.Name = "btnMinimizar";
             btnMinimizar.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnMinimizar.Size = new Size(29, 23);
+            btnMinimizar.Size = new Size(25, 17);
             btnMinimizar.TabIndex = 8;
             btnMinimizar.Text = "-";
             // 
@@ -124,11 +121,10 @@
             btnMaximizar.FillColor = Color.FromArgb(190, 158, 68);
             btnMaximizar.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnMaximizar.ForeColor = Color.White;
-            btnMaximizar.Location = new Point(2993, 0);
-            btnMaximizar.Margin = new Padding(3, 4, 3, 4);
+            btnMaximizar.Location = new Point(2619, 0);
             btnMaximizar.Name = "btnMaximizar";
             btnMaximizar.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnMaximizar.Size = new Size(29, 23);
+            btnMaximizar.Size = new Size(25, 17);
             btnMaximizar.TabIndex = 6;
             btnMaximizar.Text = "0";
             // 
@@ -143,11 +139,10 @@
             guna2Button1.FillColor = Color.FromArgb(190, 158, 68);
             guna2Button1.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
             guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(3028, 0);
-            guna2Button1.Margin = new Padding(3, 4, 3, 4);
+            guna2Button1.Location = new Point(2650, 0);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button1.Size = new Size(29, 23);
+            guna2Button1.Size = new Size(25, 17);
             guna2Button1.TabIndex = 5;
             guna2Button1.Text = "X";
             // 
@@ -160,17 +155,18 @@
             panelContenedor.Controls.Add(guna2Button3);
             panelContenedor.Controls.Add(guna2Button2);
             panelContenedor.Dock = DockStyle.Fill;
-            panelContenedor.Location = new Point(0, 27);
-            panelContenedor.Margin = new Padding(3, 4, 3, 4);
+            panelContenedor.Location = new Point(0, 20);
             panelContenedor.Name = "panelContenedor";
-            panelContenedor.Size = new Size(992, 495);
+            panelContenedor.Size = new Size(868, 372);
             panelContenedor.TabIndex = 4;
             // 
             // groupBox1
             // 
-            groupBox1.Location = new Point(200, 19);
+            groupBox1.Location = new Point(95, 17);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(766, 382);
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(670, 286);
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
@@ -186,11 +182,10 @@
             guna2Button5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2Button5.ForeColor = Color.White;
             guna2Button5.Image = (Image)resources.GetObject("guna2Button5.Image");
-            guna2Button5.Location = new Point(824, 436);
-            guna2Button5.Margin = new Padding(3, 4, 3, 4);
+            guna2Button5.Location = new Point(721, 327);
             guna2Button5.Name = "guna2Button5";
             guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Button5.Size = new Size(114, 35);
+            guna2Button5.Size = new Size(100, 26);
             guna2Button5.TabIndex = 4;
             guna2Button5.Text = "REGRESAR";
             guna2Button5.Click += guna2Button5_Click;
@@ -206,11 +201,10 @@
             guna2Button4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2Button4.ForeColor = Color.White;
             guna2Button4.Image = (Image)resources.GetObject("guna2Button4.Image");
-            guna2Button4.Location = new Point(607, 436);
-            guna2Button4.Margin = new Padding(3, 4, 3, 4);
+            guna2Button4.Location = new Point(531, 327);
             guna2Button4.Name = "guna2Button4";
             guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Button4.Size = new Size(114, 35);
+            guna2Button4.Size = new Size(100, 26);
             guna2Button4.TabIndex = 3;
             guna2Button4.Text = "MODIFICAR";
             // 
@@ -225,11 +219,10 @@
             guna2Button3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2Button3.ForeColor = Color.White;
             guna2Button3.Image = (Image)resources.GetObject("guna2Button3.Image");
-            guna2Button3.Location = new Point(394, 436);
-            guna2Button3.Margin = new Padding(3, 4, 3, 4);
+            guna2Button3.Location = new Point(345, 327);
             guna2Button3.Name = "guna2Button3";
             guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2Button3.Size = new Size(114, 35);
+            guna2Button3.Size = new Size(100, 26);
             guna2Button3.TabIndex = 2;
             guna2Button3.Text = "ELIMINAR";
             // 
@@ -244,22 +237,20 @@
             guna2Button2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2Button2.ForeColor = Color.White;
             guna2Button2.Image = (Image)resources.GetObject("guna2Button2.Image");
-            guna2Button2.Location = new Point(35, 436);
-            guna2Button2.Margin = new Padding(3, 4, 3, 4);
+            guna2Button2.Location = new Point(31, 327);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2Button2.Size = new Size(114, 35);
+            guna2Button2.Size = new Size(100, 26);
             guna2Button2.TabIndex = 1;
             guna2Button2.Text = "REGISTRAR";
             // 
             // FormLimpieza
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(992, 522);
+            ClientSize = new Size(868, 392);
             Controls.Add(panelContenedor);
             Controls.Add(panel1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "FormLimpieza";
             Text = "FormLimpieza";
             panel1.ResumeLayout(false);

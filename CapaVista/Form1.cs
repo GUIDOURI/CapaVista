@@ -209,7 +209,7 @@ namespace Hotel
 
                     if (count > 0)
                     {
-                        MessageBox.Show("Inicio de sesión exitoso");
+                        
                          FrmMenu menuForm = new FrmMenu();
                          menuForm.Show();
                          this.Hide();

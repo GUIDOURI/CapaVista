@@ -172,7 +172,7 @@ namespace Hotel
 
         private void Btnpricipal_Click(object sender, EventArgs e)
         {
-            FormLimpieza limpieza= new FormLimpieza();
+            FormLimpieza limpieza = new FormLimpieza();
             limpieza.Show();
             this.Hide();
 
