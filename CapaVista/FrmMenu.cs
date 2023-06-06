@@ -156,6 +156,8 @@ namespace Hotel
             formSize = this.ClientSize;
         }
 
+
+
         private void btnMenu_Click(object sender, EventArgs e)
         {
             //-------CON EFECTO SLIDING
@@ -189,6 +191,7 @@ namespace Hotel
         private void Btnpricipal_Click(object sender, EventArgs e)
         {
             FormLimpieza limpieza = new FormLimpieza();
+            limpieza.MdiParent = this; 
             limpieza.Show();
             this.Hide();
             
