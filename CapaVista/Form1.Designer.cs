@@ -54,9 +54,9 @@
             label1 = new Label();
             ptbLogo = new PictureBox();
             panel1 = new Panel();
+            btnMaximizar = new Guna.UI2.WinForms.Guna2Button();
             BtnRestaurar = new Guna.UI2.WinForms.Guna2Button();
             btnMinimizar = new Guna.UI2.WinForms.Guna2Button();
-            btnMaximizar = new Guna.UI2.WinForms.Guna2Button();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             PanelPrincipal.SuspendLayout();
             PanelMedio.SuspendLayout();
@@ -87,7 +87,7 @@
             PanelMedio.Dock = DockStyle.Fill;
             PanelMedio.FillColor = Color.Black;
             PanelMedio.FillColor2 = Color.FromArgb(26, 26, 26);
-            PanelMedio.Font = new Font("Alegreya", 8.999999F, FontStyle.Regular, GraphicsUnit.Point);
+            PanelMedio.Font = new Font("Microsoft Sans Serif", 8.999999F, FontStyle.Regular, GraphicsUnit.Point);
             PanelMedio.Location = new Point(0, 20);
             PanelMedio.Name = "PanelMedio";
             PanelMedio.ShadowDecoration.CustomizableEdges = customizableEdges8;
@@ -107,7 +107,7 @@
             btnIngresar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnIngresar.FillColor = Color.Transparent;
             btnIngresar.FillColor2 = Color.FromArgb(26, 26, 26);
-            btnIngresar.Font = new Font("Alegreya", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnIngresar.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnIngresar.ForeColor = Color.Goldenrod;
             btnIngresar.Location = new Point(297, 446);
             btnIngresar.Name = "btnIngresar";
@@ -172,11 +172,11 @@
             label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Alegreya", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(190, 158, 68);
             label2.Location = new Point(341, 349);
             label2.Name = "label2";
-            label2.Size = new Size(117, 31);
+            label2.Size = new Size(133, 25);
             label2.TabIndex = 2;
             label2.Text = "Contraseña";
             // 
@@ -185,11 +185,11 @@
             label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Alegreya", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(190, 158, 68);
             label1.Location = new Point(354, 263);
             label1.Name = "label1";
-            label1.Size = new Size(84, 31);
+            label1.Size = new Size(93, 25);
             label1.TabIndex = 1;
             label1.Text = "Usuario";
             // 
@@ -204,14 +204,15 @@
             ptbLogo.SizeMode = PictureBoxSizeMode.Zoom;
             ptbLogo.TabIndex = 0;
             ptbLogo.TabStop = false;
+            ptbLogo.Click += ptbLogo_Click;
             ptbLogo.MouseDown += ptbLogo_MouseDown;
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(190, 158, 68);
+            panel1.Controls.Add(btnMaximizar);
             panel1.Controls.Add(BtnRestaurar);
             panel1.Controls.Add(btnMinimizar);
-            panel1.Controls.Add(btnMaximizar);
             panel1.Controls.Add(guna2Button1);
             panel1.Dock = DockStyle.Top;
             panel1.ForeColor = Color.Coral;
@@ -221,48 +222,10 @@
             panel1.TabIndex = 0;
             panel1.MouseDown += panel1_MouseDown;
             // 
-            // BtnRestaurar
-            // 
-            BtnRestaurar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnRestaurar.CustomizableEdges = customizableEdges9;
-            BtnRestaurar.DisabledState.BorderColor = Color.DarkGray;
-            BtnRestaurar.DisabledState.CustomBorderColor = Color.DarkGray;
-            BtnRestaurar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            BtnRestaurar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            BtnRestaurar.FillColor = Color.FromArgb(190, 158, 68);
-            BtnRestaurar.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
-            BtnRestaurar.ForeColor = Color.White;
-            BtnRestaurar.Location = new Point(730, 0);
-            BtnRestaurar.Name = "BtnRestaurar";
-            BtnRestaurar.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            BtnRestaurar.Size = new Size(25, 17);
-            BtnRestaurar.TabIndex = 7;
-            BtnRestaurar.Text = "0";
-            BtnRestaurar.Click += BtnRestaurar_Click;
-            // 
-            // btnMinimizar
-            // 
-            btnMinimizar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnMinimizar.CustomizableEdges = customizableEdges11;
-            btnMinimizar.DisabledState.BorderColor = Color.DarkGray;
-            btnMinimizar.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnMinimizar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnMinimizar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnMinimizar.FillColor = Color.FromArgb(190, 158, 68);
-            btnMinimizar.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnMinimizar.ForeColor = Color.White;
-            btnMinimizar.Location = new Point(699, 0);
-            btnMinimizar.Name = "btnMinimizar";
-            btnMinimizar.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnMinimizar.Size = new Size(25, 17);
-            btnMinimizar.TabIndex = 8;
-            btnMinimizar.Text = "-";
-            btnMinimizar.Click += btnMinimizar_Click;
-            // 
             // btnMaximizar
             // 
             btnMaximizar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnMaximizar.CustomizableEdges = customizableEdges13;
+            btnMaximizar.CustomizableEdges = customizableEdges9;
             btnMaximizar.DisabledState.BorderColor = Color.DarkGray;
             btnMaximizar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnMaximizar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -272,11 +235,49 @@
             btnMaximizar.ForeColor = Color.White;
             btnMaximizar.Location = new Point(730, 0);
             btnMaximizar.Name = "btnMaximizar";
-            btnMaximizar.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnMaximizar.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnMaximizar.Size = new Size(25, 17);
             btnMaximizar.TabIndex = 6;
             btnMaximizar.Text = "0";
             btnMaximizar.Click += btnMaximizar_Click;
+            // 
+            // BtnRestaurar
+            // 
+            BtnRestaurar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnRestaurar.CustomizableEdges = customizableEdges11;
+            BtnRestaurar.DisabledState.BorderColor = Color.DarkGray;
+            BtnRestaurar.DisabledState.CustomBorderColor = Color.DarkGray;
+            BtnRestaurar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            BtnRestaurar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            BtnRestaurar.FillColor = Color.FromArgb(190, 158, 68);
+            BtnRestaurar.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
+            BtnRestaurar.ForeColor = Color.White;
+            BtnRestaurar.Location = new Point(730, 0);
+            BtnRestaurar.Name = "BtnRestaurar";
+            BtnRestaurar.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            BtnRestaurar.Size = new Size(25, 17);
+            BtnRestaurar.TabIndex = 7;
+            BtnRestaurar.Text = "0";
+            BtnRestaurar.Click += BtnRestaurar_Click;
+            // 
+            // btnMinimizar
+            // 
+            btnMinimizar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnMinimizar.CustomizableEdges = customizableEdges13;
+            btnMinimizar.DisabledState.BorderColor = Color.DarkGray;
+            btnMinimizar.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnMinimizar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnMinimizar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnMinimizar.FillColor = Color.FromArgb(190, 158, 68);
+            btnMinimizar.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnMinimizar.ForeColor = Color.White;
+            btnMinimizar.Location = new Point(699, 0);
+            btnMinimizar.Name = "btnMinimizar";
+            btnMinimizar.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnMinimizar.Size = new Size(25, 17);
+            btnMinimizar.TabIndex = 8;
+            btnMinimizar.Text = "-";
+            btnMinimizar.Click += btnMinimizar_Click;
             // 
             // guna2Button1
             // 
@@ -305,7 +306,7 @@
             Controls.Add(PanelPrincipal);
             MinimumSize = new Size(736, 560);
             Name = "Form1";
-            StartPosition = FormStartPosition.CenterParent;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             Load += Form1_Load;
             PanelPrincipal.ResumeLayout(false);

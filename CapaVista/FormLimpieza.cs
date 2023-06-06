@@ -29,5 +29,10 @@ namespace CapaVista
             menuForm.Show();
             this.Hide();
         }
+
+        private void FormLimpieza_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

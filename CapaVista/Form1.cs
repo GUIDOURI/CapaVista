@@ -6,11 +6,11 @@ namespace Hotel
 {
     public partial class Form1 : Form
     {
-       
+
         //Fields
         private int borderSize = 2;
         private Size formSize; //Keep form size when it is minimized and restored.Since the form is resized because it takes into account the size of the title bar and borders.
-        
+
         public Form1()
         {
             InitializeComponent();
@@ -185,7 +185,7 @@ namespace Hotel
         {
 
         }
-     
+
 
 
 
@@ -209,10 +209,10 @@ namespace Hotel
 
                     if (count > 0)
                     {
-                        
-                         FrmMenu menuForm = new FrmMenu();
-                         menuForm.Show();
-                         this.Hide();
+
+                        FrmMenu menuForm = new FrmMenu();
+                        menuForm.Show();
+                        this.Hide();
                         // Agrega aquí el código para redirigir al usuario a la siguiente ventana o realizar otras acciones después del inicio de sesión exitoso.
                     }
                     else
@@ -227,11 +227,16 @@ namespace Hotel
             }
 
 
-            
+
 
         }
 
         private void PanelMedio_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ptbLogo_Click(object sender, EventArgs e)
         {
 
         }

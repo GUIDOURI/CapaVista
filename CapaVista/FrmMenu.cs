@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace Hotel
 {
     public partial class FrmMenu : Form
@@ -117,6 +119,20 @@ namespace Hotel
             base.WndProc(ref m);
         }
 
+        private void AdjustForm()
+        {
+            switch (this.WindowState)
+            {
+                case FormWindowState.Maximized: //Maximized form (After)
+                    this.Padding = new Padding(8, 8, 8, 0);
+                    break;
+                case FormWindowState.Normal: //Restored form (After)
+                    if (this.Padding.Top != borderSize)
+                        this.Padding = new Padding(borderSize);
+                    break;
+            }
+        }
+
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -175,8 +191,55 @@ namespace Hotel
             FormLimpieza limpieza = new FormLimpieza();
             limpieza.Show();
             this.Hide();
+            void MDIChildNew_Click(object sender, System.EventArgs e)
+            {
+                FormLimpieza newMDIChild = new FormLimpieza();
+                // Set the Parent Form of the Child window.
+                newMDIChild.MdiParent = this;
+                // Display the new form.
+                newMDIChild.Show();
+            }
 
 
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        int lx, ly;
+        int sw, sh;
+
+        private void btnMini_Click(object sender, EventArgs e)
+        {
+            this.Size = new Size(sw, sh);
+            this.Location = new Point(lx, ly);
+            btnResta.Visible = false;
+            btnMaxi.Visible = true;
+        }
+
+        private void btnMaxi_Click(object sender, EventArgs e)
+        {
+            lx = this.Location.X;
+            ly = this.Location.Y;
+            sw = this.Size.Width;
+            sh = this.Size.Height;
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            btnMaxi.Visible = false;
+            btnResta.Visible = true;
+            AdjustForm();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         /*private void tmextraerMenu_Tick(object sender, EventArgs e)

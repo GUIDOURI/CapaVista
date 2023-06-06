@@ -51,13 +51,14 @@
             btnMaximizar = new Guna.UI2.WinForms.Guna2Button();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             panelContenedor = new Panel();
-            groupBox1 = new GroupBox();
+            dataGridView1 = new DataGridView();
             guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             panel1.SuspendLayout();
             panelContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -149,7 +150,7 @@
             // panelContenedor
             // 
             panelContenedor.BackColor = Color.FromArgb(26, 26, 26);
-            panelContenedor.Controls.Add(groupBox1);
+            panelContenedor.Controls.Add(dataGridView1);
             panelContenedor.Controls.Add(guna2Button5);
             panelContenedor.Controls.Add(guna2Button4);
             panelContenedor.Controls.Add(guna2Button3);
@@ -160,16 +161,14 @@
             panelContenedor.Size = new Size(868, 372);
             panelContenedor.TabIndex = 4;
             // 
-            // groupBox1
+            // dataGridView1
             // 
-            groupBox1.Location = new Point(95, 17);
-            groupBox1.Margin = new Padding(3, 2, 3, 2);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(3, 2, 3, 2);
-            groupBox1.Size = new Size(670, 286);
-            groupBox1.TabIndex = 5;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "groupBox1";
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(14, 14);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(811, 295);
+            dataGridView1.TabIndex = 5;
             // 
             // guna2Button5
             // 
@@ -253,8 +252,10 @@
             Controls.Add(panel1);
             Name = "FormLimpieza";
             Text = "FormLimpieza";
+            Load += FormLimpieza_Load;
             panel1.ResumeLayout(false);
             panelContenedor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -270,6 +271,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private GroupBox groupBox1;
+        private DataGridView dataGridView1;
     }
 }
