@@ -191,14 +191,7 @@ namespace Hotel
             FormLimpieza limpieza = new FormLimpieza();
             limpieza.Show();
             this.Hide();
-            void MDIChildNew_Click(object sender, System.EventArgs e)
-            {
-                FormLimpieza newMDIChild = new FormLimpieza();
-                // Set the Parent Form of the Child window.
-                newMDIChild.MdiParent = this;
-                // Display the new form.
-                newMDIChild.Show();
-            }
+            
 
 
         }
