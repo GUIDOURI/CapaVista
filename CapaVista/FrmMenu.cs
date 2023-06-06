@@ -191,10 +191,10 @@ namespace Hotel
         private void Btnpricipal_Click(object sender, EventArgs e)
         {
             FormLimpieza limpieza = new FormLimpieza();
-            limpieza.MdiParent = this; 
+            limpieza.MdiParent = this;
             limpieza.Show();
             this.Hide();
-            
+
 
 
         }

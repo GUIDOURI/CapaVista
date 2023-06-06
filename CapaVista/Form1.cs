@@ -2,6 +2,7 @@ using MySql.Data.MySqlClient;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
 namespace Hotel
 {
     public partial class Form1 : Form
@@ -225,10 +226,6 @@ namespace Hotel
                     MessageBox.Show("Error al conectar a la base de datos: " + ex.Message);
                 }
             }
-
-
-
-
         }
 
         private void PanelMedio_Paint(object sender, PaintEventArgs e)
