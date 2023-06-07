@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -188,14 +189,23 @@ namespace Hotel
 
         }
 
+        private void AbrirFormPanel(object formHijo)
+        {
+            if (this.panelContenedor.Controls.Count > 0)
+                this.panelContenedor.Controls.RemoveAt(0);
+            Form fh = formHijo as Form;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(fh);
+            this.panelContenedor.Tag = fh;
+            fh.Show();
+        }
+
         private void Btnpricipal_Click(object sender, EventArgs e)
         {
             FormLimpieza limpieza = new FormLimpieza();
-            limpieza.MdiParent = this; 
-            limpieza.Show();
-            this.Hide();
-            
-
+            /*limpieza.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms); /*pedir la funcion*/
+            AbrirFormPanel(limpieza);
 
         }
 

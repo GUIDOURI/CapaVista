@@ -480,7 +480,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1084, 561);
             Controls.Add(panelPrincipal);
-            IsMdiContainer = true;
             MinimumSize = new Size(600, 480);
             Name = "FrmMenu";
             StartPosition = FormStartPosition.CenterScreen;
