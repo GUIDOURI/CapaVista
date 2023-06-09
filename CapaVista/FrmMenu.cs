@@ -199,6 +199,9 @@ namespace Hotel
 
         }
 
+        private void MostrarFormLogoAlCerrarForms(object sender, FormClosedEventArgs e); 
+        
+
         private void guna2Button3_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
