@@ -203,15 +203,14 @@ namespace Hotel
         private void Btnpricipal_Click(object sender, EventArgs e)
         {
             FormLimpieza limpieza = new FormLimpieza();
-            limpieza.MdiParent = this;
-            limpieza.Show();
-            this.Hide();
-
-
-
+            limpieza.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            AbrirFormPanel(limpieza);
         }
 
-        private void MostrarFormLogoAlCerrarForms(object sender, FormClosedEventArgs e); 
+        private void MostrarFormLogoAlCerrarForms(object sender, FormClosedEventArgs e)
+        {
+            AbrirFormPanel(new FrmMenu());
+        }
         
 
         private void guna2Button3_Click(object sender, EventArgs e)
