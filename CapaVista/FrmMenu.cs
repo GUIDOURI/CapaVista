@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -204,10 +203,16 @@ namespace Hotel
         private void Btnpricipal_Click(object sender, EventArgs e)
         {
             FormLimpieza limpieza = new FormLimpieza();
-            /*limpieza.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms); /*pedir la funcion*/
-            AbrirFormPanel(limpieza);
+            limpieza.MdiParent = this;
+            limpieza.Show();
+            this.Hide();
+
+
 
         }
+
+        private void MostrarFormLogoAlCerrarForms(object sender, FormClosedEventArgs e); 
+        
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
