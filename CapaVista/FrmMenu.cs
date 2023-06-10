@@ -211,7 +211,7 @@ namespace Hotel
         {
             AbrirFormPanel(new FrmMenu());
         }
-        
+
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
@@ -250,6 +250,11 @@ namespace Hotel
         private void guna2Button4_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+
         }
 
         /*private void tmextraerMenu_Tick(object sender, EventArgs e)

@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -57,18 +60,13 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panelPrincipal = new Panel();
             panelContenedor = new Panel();
             panelMenu = new Panel();
+            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             ptbLogo = new PictureBox();
             btnMenu = new Guna.UI2.WinForms.Guna2Button();
             BtnMiPerfil = new Guna.UI2.WinForms.Guna2Button();
-            BtnServicios = new Guna.UI2.WinForms.Guna2Button();
             Btnhuesped = new Guna.UI2.WinForms.Guna2Button();
             BtnHabitaciones = new Guna.UI2.WinForms.Guna2Button();
             BtnHospedaje = new Guna.UI2.WinForms.Guna2Button();
@@ -84,7 +82,6 @@
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             tmextraerMenu = new System.Windows.Forms.Timer(components);
             tmContraerMenu = new System.Windows.Forms.Timer(components);
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             panelPrincipal.SuspendLayout();
             panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ptbLogo).BeginInit();
@@ -120,7 +117,6 @@
             panelMenu.Controls.Add(ptbLogo);
             panelMenu.Controls.Add(btnMenu);
             panelMenu.Controls.Add(BtnMiPerfil);
-            panelMenu.Controls.Add(BtnServicios);
             panelMenu.Controls.Add(Btnhuesped);
             panelMenu.Controls.Add(BtnHabitaciones);
             panelMenu.Controls.Add(BtnHospedaje);
@@ -132,6 +128,31 @@
             panelMenu.TabIndex = 2;
             panelMenu.Paint += panelMenu_Paint;
             panelMenu.MouseDown += panelMenu_MouseDown;
+            // 
+            // guna2Button2
+            // 
+            guna2Button2.BorderColor = Color.White;
+            guna2Button2.CustomizableEdges = customizableEdges1;
+            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button2.FillColor = Color.Black;
+            guna2Button2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2Button2.ForeColor = Color.FromArgb(190, 158, 68);
+            guna2Button2.HoverState.FillColor = Color.FromArgb(190, 158, 68);
+            guna2Button2.HoverState.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2Button2.HoverState.ForeColor = Color.Black;
+            guna2Button2.Image = (Image)resources.GetObject("guna2Button2.Image");
+            guna2Button2.ImageAlign = HorizontalAlignment.Left;
+            guna2Button2.ImageSize = new Size(35, 35);
+            guna2Button2.Location = new Point(-3, 327);
+            guna2Button2.Name = "guna2Button2";
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Button2.Size = new Size(225, 40);
+            guna2Button2.TabIndex = 9;
+            guna2Button2.Text = "Inventario";
+            guna2Button2.Click += guna2Button2_Click;
             // 
             // ptbLogo
             // 
@@ -189,34 +210,10 @@
             BtnMiPerfil.TabIndex = 6;
             BtnMiPerfil.Text = "   Mi Perfil";
             // 
-            // BtnServicios
-            // 
-            BtnServicios.BorderColor = Color.White;
-            BtnServicios.CustomizableEdges = customizableEdges7;
-            BtnServicios.DisabledState.BorderColor = Color.DarkGray;
-            BtnServicios.DisabledState.CustomBorderColor = Color.DarkGray;
-            BtnServicios.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            BtnServicios.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            BtnServicios.FillColor = Color.Black;
-            BtnServicios.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnServicios.ForeColor = Color.FromArgb(190, 158, 68);
-            BtnServicios.HoverState.FillColor = Color.FromArgb(190, 158, 68);
-            BtnServicios.HoverState.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnServicios.HoverState.ForeColor = Color.Black;
-            BtnServicios.Image = (Image)resources.GetObject("BtnServicios.Image");
-            BtnServicios.ImageAlign = HorizontalAlignment.Left;
-            BtnServicios.ImageSize = new Size(35, 35);
-            BtnServicios.Location = new Point(0, 281);
-            BtnServicios.Name = "BtnServicios";
-            BtnServicios.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            BtnServicios.Size = new Size(225, 40);
-            BtnServicios.TabIndex = 5;
-            BtnServicios.Text = "Servcios";
-            // 
             // Btnhuesped
             // 
             Btnhuesped.BorderColor = Color.White;
-            Btnhuesped.CustomizableEdges = customizableEdges9;
+            Btnhuesped.CustomizableEdges = customizableEdges7;
             Btnhuesped.DisabledState.BorderColor = Color.DarkGray;
             Btnhuesped.DisabledState.CustomBorderColor = Color.DarkGray;
             Btnhuesped.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -232,7 +229,7 @@
             Btnhuesped.ImageSize = new Size(35, 35);
             Btnhuesped.Location = new Point(0, 242);
             Btnhuesped.Name = "Btnhuesped";
-            Btnhuesped.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            Btnhuesped.ShadowDecoration.CustomizableEdges = customizableEdges8;
             Btnhuesped.Size = new Size(225, 40);
             Btnhuesped.TabIndex = 4;
             Btnhuesped.Text = "Objetos";
@@ -240,7 +237,7 @@
             // BtnHabitaciones
             // 
             BtnHabitaciones.BorderColor = Color.White;
-            BtnHabitaciones.CustomizableEdges = customizableEdges11;
+            BtnHabitaciones.CustomizableEdges = customizableEdges9;
             BtnHabitaciones.DisabledState.BorderColor = Color.DarkGray;
             BtnHabitaciones.DisabledState.CustomBorderColor = Color.DarkGray;
             BtnHabitaciones.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -256,7 +253,7 @@
             BtnHabitaciones.ImageSize = new Size(40, 40);
             BtnHabitaciones.Location = new Point(0, 203);
             BtnHabitaciones.Name = "BtnHabitaciones";
-            BtnHabitaciones.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            BtnHabitaciones.ShadowDecoration.CustomizableEdges = customizableEdges10;
             BtnHabitaciones.Size = new Size(225, 40);
             BtnHabitaciones.TabIndex = 3;
             BtnHabitaciones.Text = "   Ubicaciones ";
@@ -264,7 +261,7 @@
             // BtnHospedaje
             // 
             BtnHospedaje.BorderColor = Color.White;
-            BtnHospedaje.CustomizableEdges = customizableEdges13;
+            BtnHospedaje.CustomizableEdges = customizableEdges11;
             BtnHospedaje.DisabledState.BorderColor = Color.DarkGray;
             BtnHospedaje.DisabledState.CustomBorderColor = Color.DarkGray;
             BtnHospedaje.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -280,7 +277,7 @@
             BtnHospedaje.ImageSize = new Size(34, 34);
             BtnHospedaje.Location = new Point(0, 164);
             BtnHospedaje.Name = "BtnHospedaje";
-            BtnHospedaje.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            BtnHospedaje.ShadowDecoration.CustomizableEdges = customizableEdges12;
             BtnHospedaje.Size = new Size(225, 40);
             BtnHospedaje.TabIndex = 2;
             BtnHospedaje.Text = "Empleados";
@@ -288,7 +285,7 @@
             // Btnpricipal
             // 
             Btnpricipal.BorderColor = Color.White;
-            Btnpricipal.CustomizableEdges = customizableEdges15;
+            Btnpricipal.CustomizableEdges = customizableEdges13;
             Btnpricipal.DisabledState.BorderColor = Color.DarkGray;
             Btnpricipal.DisabledState.CustomBorderColor = Color.DarkGray;
             Btnpricipal.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -304,7 +301,7 @@
             Btnpricipal.ImageSize = new Size(38, 38);
             Btnpricipal.Location = new Point(0, 125);
             Btnpricipal.Name = "Btnpricipal";
-            Btnpricipal.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            Btnpricipal.ShadowDecoration.CustomizableEdges = customizableEdges14;
             Btnpricipal.Size = new Size(225, 40);
             Btnpricipal.TabIndex = 1;
             Btnpricipal.Text = "Limpieza";
@@ -333,7 +330,7 @@
             // btnMaxi
             // 
             btnMaxi.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnMaxi.CustomizableEdges = customizableEdges17;
+            btnMaxi.CustomizableEdges = customizableEdges15;
             btnMaxi.DisabledState.BorderColor = Color.DarkGray;
             btnMaxi.DisabledState.CustomBorderColor = Color.DarkGray;
             btnMaxi.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -343,7 +340,7 @@
             btnMaxi.ForeColor = Color.White;
             btnMaxi.Location = new Point(1021, 0);
             btnMaxi.Name = "btnMaxi";
-            btnMaxi.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnMaxi.ShadowDecoration.CustomizableEdges = customizableEdges16;
             btnMaxi.Size = new Size(25, 17);
             btnMaxi.TabIndex = 10;
             btnMaxi.Text = "0";
@@ -352,7 +349,7 @@
             // btnResta
             // 
             btnResta.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnResta.CustomizableEdges = customizableEdges19;
+            btnResta.CustomizableEdges = customizableEdges17;
             btnResta.DisabledState.BorderColor = Color.DarkGray;
             btnResta.DisabledState.CustomBorderColor = Color.DarkGray;
             btnResta.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -362,7 +359,7 @@
             btnResta.ForeColor = Color.White;
             btnResta.Location = new Point(1021, 0);
             btnResta.Name = "btnResta";
-            btnResta.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            btnResta.ShadowDecoration.CustomizableEdges = customizableEdges18;
             btnResta.Size = new Size(25, 17);
             btnResta.TabIndex = 11;
             btnResta.Text = "0";
@@ -371,7 +368,7 @@
             // btnMinimi
             // 
             btnMinimi.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnMinimi.CustomizableEdges = customizableEdges21;
+            btnMinimi.CustomizableEdges = customizableEdges19;
             btnMinimi.DisabledState.BorderColor = Color.DarkGray;
             btnMinimi.DisabledState.CustomBorderColor = Color.DarkGray;
             btnMinimi.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -381,7 +378,7 @@
             btnMinimi.ForeColor = Color.White;
             btnMinimi.Location = new Point(990, 0);
             btnMinimi.Name = "btnMinimi";
-            btnMinimi.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            btnMinimi.ShadowDecoration.CustomizableEdges = customizableEdges20;
             btnMinimi.Size = new Size(25, 17);
             btnMinimi.TabIndex = 11;
             btnMinimi.Text = "-";
@@ -390,7 +387,7 @@
             // guna2Button4
             // 
             guna2Button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2Button4.CustomizableEdges = customizableEdges23;
+            guna2Button4.CustomizableEdges = customizableEdges21;
             guna2Button4.DisabledState.BorderColor = Color.DarkGray;
             guna2Button4.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button4.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -400,7 +397,7 @@
             guna2Button4.ForeColor = Color.White;
             guna2Button4.Location = new Point(1052, 0);
             guna2Button4.Name = "guna2Button4";
-            guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges22;
             guna2Button4.Size = new Size(25, 17);
             guna2Button4.TabIndex = 9;
             guna2Button4.Text = "X";
@@ -409,7 +406,7 @@
             // BtnRestaurar
             // 
             BtnRestaurar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnRestaurar.CustomizableEdges = customizableEdges25;
+            BtnRestaurar.CustomizableEdges = customizableEdges23;
             BtnRestaurar.DisabledState.BorderColor = Color.DarkGray;
             BtnRestaurar.DisabledState.CustomBorderColor = Color.DarkGray;
             BtnRestaurar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -419,7 +416,7 @@
             BtnRestaurar.ForeColor = Color.White;
             BtnRestaurar.Location = new Point(1951, 0);
             BtnRestaurar.Name = "BtnRestaurar";
-            BtnRestaurar.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            BtnRestaurar.ShadowDecoration.CustomizableEdges = customizableEdges24;
             BtnRestaurar.Size = new Size(25, 17);
             BtnRestaurar.TabIndex = 7;
             BtnRestaurar.Text = "0";
@@ -427,7 +424,7 @@
             // btnMinimizar
             // 
             btnMinimizar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnMinimizar.CustomizableEdges = customizableEdges27;
+            btnMinimizar.CustomizableEdges = customizableEdges25;
             btnMinimizar.DisabledState.BorderColor = Color.DarkGray;
             btnMinimizar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnMinimizar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -437,7 +434,7 @@
             btnMinimizar.ForeColor = Color.White;
             btnMinimizar.Location = new Point(1920, 0);
             btnMinimizar.Name = "btnMinimizar";
-            btnMinimizar.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            btnMinimizar.ShadowDecoration.CustomizableEdges = customizableEdges26;
             btnMinimizar.Size = new Size(25, 17);
             btnMinimizar.TabIndex = 8;
             btnMinimizar.Text = "-";
@@ -445,7 +442,7 @@
             // btnMaximizar
             // 
             btnMaximizar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnMaximizar.CustomizableEdges = customizableEdges29;
+            btnMaximizar.CustomizableEdges = customizableEdges27;
             btnMaximizar.DisabledState.BorderColor = Color.DarkGray;
             btnMaximizar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnMaximizar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -455,7 +452,7 @@
             btnMaximizar.ForeColor = Color.White;
             btnMaximizar.Location = new Point(1951, 0);
             btnMaximizar.Name = "btnMaximizar";
-            btnMaximizar.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            btnMaximizar.ShadowDecoration.CustomizableEdges = customizableEdges28;
             btnMaximizar.Size = new Size(25, 17);
             btnMaximizar.TabIndex = 6;
             btnMaximizar.Text = "0";
@@ -463,7 +460,7 @@
             // guna2Button1
             // 
             guna2Button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2Button1.CustomizableEdges = customizableEdges31;
+            guna2Button1.CustomizableEdges = customizableEdges29;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -473,34 +470,10 @@
             guna2Button1.ForeColor = Color.White;
             guna2Button1.Location = new Point(1982, 0);
             guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges30;
             guna2Button1.Size = new Size(25, 17);
             guna2Button1.TabIndex = 5;
             guna2Button1.Text = "X";
-            // 
-            // guna2Button2
-            // 
-            guna2Button2.BorderColor = Color.White;
-            guna2Button2.CustomizableEdges = customizableEdges1;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.FillColor = Color.Black;
-            guna2Button2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2Button2.ForeColor = Color.FromArgb(190, 158, 68);
-            guna2Button2.HoverState.FillColor = Color.FromArgb(190, 158, 68);
-            guna2Button2.HoverState.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2Button2.HoverState.ForeColor = Color.Black;
-            guna2Button2.Image = (Image)resources.GetObject("guna2Button2.Image");
-            guna2Button2.ImageAlign = HorizontalAlignment.Left;
-            guna2Button2.ImageSize = new Size(35, 35);
-            guna2Button2.Location = new Point(-3, 327);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button2.Size = new Size(225, 40);
-            guna2Button2.TabIndex = 9;
-            guna2Button2.Text = "Inventario";
             // 
             // FrmMenu
             // 
@@ -532,7 +505,6 @@
         private Guna.UI2.WinForms.Guna2Button btnMaximizar;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button BtnMiPerfil;
-        private Guna.UI2.WinForms.Guna2Button BtnServicios;
         private Guna.UI2.WinForms.Guna2Button Btnhuesped;
         private Guna.UI2.WinForms.Guna2Button BtnHabitaciones;
         private Guna.UI2.WinForms.Guna2Button BtnHospedaje;
