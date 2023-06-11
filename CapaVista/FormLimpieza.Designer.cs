@@ -72,7 +72,7 @@
             panel1.ForeColor = Color.Coral;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(868, 20);
+            panel1.Size = new Size(875, 20);
             panel1.TabIndex = 2;
             // 
             // BtnRestaurar
@@ -86,7 +86,7 @@
             BtnRestaurar.FillColor = Color.FromArgb(190, 158, 68);
             BtnRestaurar.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
             BtnRestaurar.ForeColor = Color.White;
-            BtnRestaurar.Location = new Point(2619, 0);
+            BtnRestaurar.Location = new Point(2626, 0);
             BtnRestaurar.Name = "BtnRestaurar";
             BtnRestaurar.ShadowDecoration.CustomizableEdges = customizableEdges2;
             BtnRestaurar.Size = new Size(25, 17);
@@ -104,7 +104,7 @@
             btnMinimizar.FillColor = Color.FromArgb(190, 158, 68);
             btnMinimizar.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnMinimizar.ForeColor = Color.White;
-            btnMinimizar.Location = new Point(2588, 0);
+            btnMinimizar.Location = new Point(2595, 0);
             btnMinimizar.Name = "btnMinimizar";
             btnMinimizar.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnMinimizar.Size = new Size(25, 17);
@@ -122,7 +122,7 @@
             btnMaximizar.FillColor = Color.FromArgb(190, 158, 68);
             btnMaximizar.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnMaximizar.ForeColor = Color.White;
-            btnMaximizar.Location = new Point(2619, 0);
+            btnMaximizar.Location = new Point(2626, 0);
             btnMaximizar.Name = "btnMaximizar";
             btnMaximizar.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnMaximizar.Size = new Size(25, 17);
@@ -140,7 +140,7 @@
             guna2Button1.FillColor = Color.FromArgb(190, 158, 68);
             guna2Button1.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
             guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(2650, 0);
+            guna2Button1.Location = new Point(2657, 0);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Button1.Size = new Size(25, 17);
@@ -158,13 +158,13 @@
             panelContenedor.Dock = DockStyle.Fill;
             panelContenedor.Location = new Point(0, 20);
             panelContenedor.Name = "panelContenedor";
-            panelContenedor.Size = new Size(868, 372);
+            panelContenedor.Size = new Size(875, 365);
             panelContenedor.TabIndex = 4;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(14, 14);
+            dataGridView1.Location = new Point(31, 6);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(811, 295);
@@ -247,7 +247,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(868, 392);
+            ClientSize = new Size(875, 385);
             Controls.Add(panelContenedor);
             Controls.Add(panel1);
             Name = "FormLimpieza";

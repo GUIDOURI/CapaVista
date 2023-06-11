@@ -146,7 +146,7 @@
             guna2Button2.Image = (Image)resources.GetObject("guna2Button2.Image");
             guna2Button2.ImageAlign = HorizontalAlignment.Left;
             guna2Button2.ImageSize = new Size(35, 35);
-            guna2Button2.Location = new Point(-3, 327);
+            guna2Button2.Location = new Point(3, 288);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Button2.Size = new Size(225, 40);
