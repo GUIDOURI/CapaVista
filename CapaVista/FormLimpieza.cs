@@ -34,5 +34,10 @@ namespace CapaVista
         {
 
         }
+
+        private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

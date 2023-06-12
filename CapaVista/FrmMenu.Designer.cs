@@ -69,7 +69,7 @@
             BtnMiPerfil = new Guna.UI2.WinForms.Guna2Button();
             Btnhuesped = new Guna.UI2.WinForms.Guna2Button();
             BtnHabitaciones = new Guna.UI2.WinForms.Guna2Button();
-            BtnHospedaje = new Guna.UI2.WinForms.Guna2Button();
+            BtnEmpleados = new Guna.UI2.WinForms.Guna2Button();
             Btnpricipal = new Guna.UI2.WinForms.Guna2Button();
             panel1 = new Panel();
             btnMaxi = new Guna.UI2.WinForms.Guna2Button();
@@ -119,7 +119,7 @@
             panelMenu.Controls.Add(BtnMiPerfil);
             panelMenu.Controls.Add(Btnhuesped);
             panelMenu.Controls.Add(BtnHabitaciones);
-            panelMenu.Controls.Add(BtnHospedaje);
+            panelMenu.Controls.Add(BtnEmpleados);
             panelMenu.Controls.Add(Btnpricipal);
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 20);
@@ -258,29 +258,30 @@
             BtnHabitaciones.TabIndex = 3;
             BtnHabitaciones.Text = "   Ubicaciones ";
             // 
-            // BtnHospedaje
+            // BtnEmpleados
             // 
-            BtnHospedaje.BorderColor = Color.White;
-            BtnHospedaje.CustomizableEdges = customizableEdges11;
-            BtnHospedaje.DisabledState.BorderColor = Color.DarkGray;
-            BtnHospedaje.DisabledState.CustomBorderColor = Color.DarkGray;
-            BtnHospedaje.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            BtnHospedaje.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            BtnHospedaje.FillColor = Color.Black;
-            BtnHospedaje.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnHospedaje.ForeColor = Color.FromArgb(190, 158, 68);
-            BtnHospedaje.HoverState.FillColor = Color.FromArgb(190, 158, 68);
-            BtnHospedaje.HoverState.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            BtnHospedaje.HoverState.ForeColor = Color.Black;
-            BtnHospedaje.Image = (Image)resources.GetObject("BtnHospedaje.Image");
-            BtnHospedaje.ImageAlign = HorizontalAlignment.Left;
-            BtnHospedaje.ImageSize = new Size(34, 34);
-            BtnHospedaje.Location = new Point(0, 164);
-            BtnHospedaje.Name = "BtnHospedaje";
-            BtnHospedaje.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            BtnHospedaje.Size = new Size(225, 40);
-            BtnHospedaje.TabIndex = 2;
-            BtnHospedaje.Text = "Empleados";
+            BtnEmpleados.BorderColor = Color.White;
+            BtnEmpleados.CustomizableEdges = customizableEdges11;
+            BtnEmpleados.DisabledState.BorderColor = Color.DarkGray;
+            BtnEmpleados.DisabledState.CustomBorderColor = Color.DarkGray;
+            BtnEmpleados.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            BtnEmpleados.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            BtnEmpleados.FillColor = Color.Black;
+            BtnEmpleados.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnEmpleados.ForeColor = Color.FromArgb(190, 158, 68);
+            BtnEmpleados.HoverState.FillColor = Color.FromArgb(190, 158, 68);
+            BtnEmpleados.HoverState.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnEmpleados.HoverState.ForeColor = Color.Black;
+            BtnEmpleados.Image = (Image)resources.GetObject("BtnEmpleados.Image");
+            BtnEmpleados.ImageAlign = HorizontalAlignment.Left;
+            BtnEmpleados.ImageSize = new Size(34, 34);
+            BtnEmpleados.Location = new Point(0, 164);
+            BtnEmpleados.Name = "BtnEmpleados";
+            BtnEmpleados.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            BtnEmpleados.Size = new Size(225, 40);
+            BtnEmpleados.TabIndex = 2;
+            BtnEmpleados.Text = "Empleados";
+            BtnEmpleados.Click += BtnEmpleados_Click;
             // 
             // Btnpricipal
             // 
@@ -507,7 +508,7 @@
         private Guna.UI2.WinForms.Guna2Button BtnMiPerfil;
         private Guna.UI2.WinForms.Guna2Button Btnhuesped;
         private Guna.UI2.WinForms.Guna2Button BtnHabitaciones;
-        private Guna.UI2.WinForms.Guna2Button BtnHospedaje;
+        private Guna.UI2.WinForms.Guna2Button BtnEmpleados;
         private Guna.UI2.WinForms.Guna2Button Btnpricipal;
         private Guna.UI2.WinForms.Guna2Button btnMenu;
         private System.Windows.Forms.Timer tmextraerMenu;

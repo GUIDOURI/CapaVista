@@ -193,6 +193,7 @@ namespace Hotel
             if (this.panelContenedor.Controls.Count > 0)
                 this.panelContenedor.Controls.RemoveAt(0);
             Form fh = formHijo as Form;
+            fh.TopLevel = false;
             fh.FormBorderStyle = FormBorderStyle.None;
             fh.Dock = DockStyle.Fill;
             this.panelContenedor.Controls.Add(fh);
@@ -205,6 +206,13 @@ namespace Hotel
             FormLimpieza limpieza = new FormLimpieza();
             limpieza.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
             AbrirFormPanel(limpieza);
+        }
+
+        private void BtnEmpleados_Click(object sender, EventArgs e)
+        {
+            FormEmpleados empleados = new FormEmpleados();
+            empleados.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            AbrirFormPanel(empleados);
         }
 
         private void MostrarFormLogoAlCerrarForms(object sender, FormClosedEventArgs e)
@@ -256,6 +264,8 @@ namespace Hotel
         {
 
         }
+
+        
 
         /*private void tmextraerMenu_Tick(object sender, EventArgs e)
         {

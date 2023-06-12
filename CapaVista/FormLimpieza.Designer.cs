@@ -160,6 +160,7 @@
             panelContenedor.Name = "panelContenedor";
             panelContenedor.Size = new Size(875, 365);
             panelContenedor.TabIndex = 4;
+            panelContenedor.Paint += panelContenedor_Paint;
             // 
             // dataGridView1
             // 
