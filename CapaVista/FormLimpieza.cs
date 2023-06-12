@@ -30,6 +30,25 @@ namespace CapaVista
             this.Hide();
         }
 
+        //abrir los formularios en el principal
+        private void AbrirFormPanel(object formHijo)
+        {
+            if (this.panelContenedor.Controls.Count > 0)
+                this.panelContenedor.Controls.RemoveAt(0);
+            Form fh = formHijo as Form;
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(fh);
+            this.panelContenedor.Tag = fh;
+            fh.Show();
+        }
+
+        private void MostrarFormLogoAlCerrarForms(object sender, FormClosedEventArgs e)
+        {
+            AbrirFormPanel(new FrmMenu());
+        }
+
         private void FormLimpieza_Load(object sender, EventArgs e)
         {
 
@@ -38,6 +57,15 @@ namespace CapaVista
         private void panelContenedor_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            RegistroLimpiezaHabitacion registroLimpiezaHabitacion = new RegistroLimpiezaHabitacion();
+            //registroLimpiezaHabitacion.FormClosed -= new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            //AbrirFormPanel(registroLimpiezaHabitacion);
+            registroLimpiezaHabitacion.Show();
+            this.Hide();
         }
     }
 }

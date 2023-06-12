@@ -265,7 +265,7 @@ namespace Hotel
 
         }
 
-        
+
 
         /*private void tmextraerMenu_Tick(object sender, EventArgs e)
         {
