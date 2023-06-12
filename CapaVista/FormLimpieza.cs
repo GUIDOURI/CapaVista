@@ -25,9 +25,12 @@ namespace CapaVista
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-            FrmMenu menuForm = new FrmMenu();
+            /*FrmMenu menuForm = new FrmMenu();
             menuForm.Show();
-            this.Hide();
+            this.Hide();*/
+            FrmMenu menu = new FrmMenu();
+            menu.FormClosed -= new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            AbrirFormPanel(menu);
         }
 
         //abrir los formularios en el principal
@@ -62,10 +65,9 @@ namespace CapaVista
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             RegistroLimpiezaHabitacion registroLimpiezaHabitacion = new RegistroLimpiezaHabitacion();
-            //registroLimpiezaHabitacion.FormClosed -= new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
-            //AbrirFormPanel(registroLimpiezaHabitacion);
-            registroLimpiezaHabitacion.Show();
-            this.Hide();
+            registroLimpiezaHabitacion.FormClosed -= new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            AbrirFormPanel(registroLimpiezaHabitacion);
+            
         }
     }
 }
