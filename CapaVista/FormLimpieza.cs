@@ -39,5 +39,30 @@ namespace CapaVista
         {
 
         }
+
+        private void AbrirFormPanel(object formHijo)
+        {
+            if (this.panelContenedor.Controls.Count > 0)
+                this.panelContenedor.Controls.RemoveAt(0);
+            Form fh = formHijo as Form;
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(fh);
+            this.panelContenedor.Tag = fh;
+            fh.Show();
+        }
+
+        private void MostrarFormLogoAlCerrarForms(object sender, FormClosedEventArgs e)
+        {
+            AbrirFormPanel(new FrmMenu());
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            RegistroLimpiezaHabitacion registrolimpieza = new RegistroLimpiezaHabitacion();
+            registrolimpieza.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            AbrirFormPanel(registrolimpieza);
+        }
     }
 }
