@@ -31,100 +31,90 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEmpleados));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dataGridView1 = new DataGridView();
-            guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Column7 = new DataGridViewTextBoxColumn();
+            textBox1 = new TextBox();
+            BtnRegistrarHab = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(28, 27);
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7 });
+            dataGridView1.Location = new Point(31, 94);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(779, 320);
             dataGridView1.TabIndex = 0;
             // 
-            // guna2Button5
+            // Column1
             // 
-            guna2Button5.CustomizableEdges = customizableEdges1;
-            guna2Button5.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button5.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button5.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button5.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button5.FillColor = Color.Transparent;
-            guna2Button5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2Button5.ForeColor = Color.White;
-            guna2Button5.Image = (Image)resources.GetObject("guna2Button5.Image");
-            guna2Button5.Location = new Point(707, 381);
-            guna2Button5.Name = "guna2Button5";
-            guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button5.Size = new Size(100, 26);
-            guna2Button5.TabIndex = 8;
-            guna2Button5.Text = "REGRESAR";
+            Column1.HeaderText = "ID";
+            Column1.Name = "Column1";
             // 
-            // guna2Button4
+            // Column2
             // 
-            guna2Button4.CustomizableEdges = customizableEdges3;
-            guna2Button4.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button4.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button4.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button4.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button4.FillColor = Color.Transparent;
-            guna2Button4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2Button4.ForeColor = Color.White;
-            guna2Button4.Image = (Image)resources.GetObject("guna2Button4.Image");
-            guna2Button4.Location = new Point(517, 381);
-            guna2Button4.Name = "guna2Button4";
-            guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button4.Size = new Size(100, 26);
-            guna2Button4.TabIndex = 7;
-            guna2Button4.Text = "MODIFICAR";
+            Column2.HeaderText = "Nombre";
+            Column2.Name = "Column2";
             // 
-            // guna2Button3
+            // Column3
             // 
-            guna2Button3.CustomizableEdges = customizableEdges5;
-            guna2Button3.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button3.FillColor = Color.Transparent;
-            guna2Button3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2Button3.ForeColor = Color.White;
-            guna2Button3.Image = (Image)resources.GetObject("guna2Button3.Image");
-            guna2Button3.Location = new Point(331, 381);
-            guna2Button3.Name = "guna2Button3";
-            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button3.Size = new Size(100, 26);
-            guna2Button3.TabIndex = 6;
-            guna2Button3.Text = "ELIMINAR";
+            Column3.HeaderText = "Apellidos";
+            Column3.Name = "Column3";
+            Column3.Width = 120;
             // 
-            // guna2Button2
+            // Column4
             // 
-            guna2Button2.CustomizableEdges = customizableEdges7;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.FillColor = Color.Transparent;
-            guna2Button2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2Button2.ForeColor = Color.White;
-            guna2Button2.Image = (Image)resources.GetObject("guna2Button2.Image");
-            guna2Button2.Location = new Point(17, 381);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button2.Size = new Size(100, 26);
-            guna2Button2.TabIndex = 5;
-            guna2Button2.Text = "REGISTRAR";
+            Column4.HeaderText = "Celular";
+            Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Direccion";
+            Column5.Name = "Column5";
+            Column5.Width = 110;
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Fecha";
+            Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            Column7.HeaderText = "Rubro";
+            Column7.Name = "Column7";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(56, 35);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(575, 23);
+            textBox1.TabIndex = 1;
+            // 
+            // BtnRegistrarHab
+            // 
+            BtnRegistrarHab.CustomizableEdges = customizableEdges1;
+            BtnRegistrarHab.DisabledState.BorderColor = Color.DarkGray;
+            BtnRegistrarHab.DisabledState.CustomBorderColor = Color.DarkGray;
+            BtnRegistrarHab.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            BtnRegistrarHab.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            BtnRegistrarHab.FillColor = Color.Transparent;
+            BtnRegistrarHab.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            BtnRegistrarHab.ForeColor = Color.White;
+            BtnRegistrarHab.Image = (Image)resources.GetObject("BtnRegistrarHab.Image");
+            BtnRegistrarHab.Location = new Point(662, 35);
+            BtnRegistrarHab.Name = "BtnRegistrarHab";
+            BtnRegistrarHab.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            BtnRegistrarHab.Size = new Size(119, 33);
+            BtnRegistrarHab.TabIndex = 3;
+            BtnRegistrarHab.Text = "BUSCAR";
             // 
             // FormEmpleados
             // 
@@ -132,23 +122,27 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(26, 26, 26);
             ClientSize = new Size(837, 450);
-            Controls.Add(guna2Button5);
-            Controls.Add(guna2Button4);
-            Controls.Add(guna2Button3);
-            Controls.Add(guna2Button2);
+            Controls.Add(BtnRegistrarHab);
+            Controls.Add(textBox1);
             Controls.Add(dataGridView1);
             Name = "FormEmpleados";
             Text = "FormEmpleados";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private DataGridView dataGridView1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column6;
+        private DataGridViewTextBoxColumn Column7;
+        private TextBox textBox1;
+        private Guna.UI2.WinForms.Guna2Button BtnRegistrarHab;
     }
 }

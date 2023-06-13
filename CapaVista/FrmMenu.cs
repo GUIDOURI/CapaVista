@@ -265,6 +265,13 @@ namespace Hotel
 
         }
 
+        private void guna2Button3_Click_1(object sender, EventArgs e)
+        {
+            FormInspeccion inspeccion = new FormInspeccion();
+            inspeccion.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            AbrirFormPanel(inspeccion);
+        }
+
 
 
         /*private void tmextraerMenu_Tick(object sender, EventArgs e)

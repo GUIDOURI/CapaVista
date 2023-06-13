@@ -27,10 +27,10 @@ namespace CapaVista
         {
             /*FrmMenu menuForm = new FrmMenu();
             menuForm.Show();
-            this.Hide();*/
+            this.Hide();
             FrmMenu menu = new FrmMenu();
             menu.FormClosed -= new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
-            AbrirFormPanel(menu);
+            AbrirFormPanel(menu);*/
         }
 
         //abrir los formularios en el principal
@@ -68,7 +68,12 @@ namespace CapaVista
             registroLimpiezaHabitacion.FormClosed -= new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
             AbrirFormPanel(registroLimpiezaHabitacion);
             //Al mostrar el registro se quedan los botones anteriores
-                    
+
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
