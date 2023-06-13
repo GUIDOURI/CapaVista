@@ -67,7 +67,8 @@ namespace CapaVista
             RegistroLimpiezaHabitacion registroLimpiezaHabitacion = new RegistroLimpiezaHabitacion();
             registroLimpiezaHabitacion.FormClosed -= new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
             AbrirFormPanel(registroLimpiezaHabitacion);
-            
+            //Al mostrar el registro se quedan los botones anteriores
+                    
         }
     }
 }
