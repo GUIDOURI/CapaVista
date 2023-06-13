@@ -95,17 +95,19 @@
             panelPrincipal.Controls.Add(panel1);
             panelPrincipal.Dock = DockStyle.Fill;
             panelPrincipal.Location = new Point(0, 0);
+            panelPrincipal.Margin = new Padding(3, 4, 3, 4);
             panelPrincipal.Name = "panelPrincipal";
-            panelPrincipal.Size = new Size(1084, 561);
+            panelPrincipal.Size = new Size(1239, 748);
             panelPrincipal.TabIndex = 0;
             // 
             // panelContenedor
             // 
             panelContenedor.BackColor = Color.FromArgb(26, 26, 26);
             panelContenedor.Dock = DockStyle.Fill;
-            panelContenedor.Location = new Point(225, 20);
+            panelContenedor.Location = new Point(257, 27);
+            panelContenedor.Margin = new Padding(3, 4, 3, 4);
             panelContenedor.Name = "panelContenedor";
-            panelContenedor.Size = new Size(859, 541);
+            panelContenedor.Size = new Size(982, 721);
             panelContenedor.TabIndex = 3;
             panelContenedor.Paint += panelContenedor_Paint;
             panelContenedor.MouseDown += panelContenedor_MouseDown;
@@ -122,9 +124,10 @@
             panelMenu.Controls.Add(BtnEmpleados);
             panelMenu.Controls.Add(Btnpricipal);
             panelMenu.Dock = DockStyle.Left;
-            panelMenu.Location = new Point(0, 20);
+            panelMenu.Location = new Point(0, 27);
+            panelMenu.Margin = new Padding(3, 4, 3, 4);
             panelMenu.Name = "panelMenu";
-            panelMenu.Size = new Size(225, 541);
+            panelMenu.Size = new Size(257, 721);
             panelMenu.TabIndex = 2;
             panelMenu.Paint += panelMenu_Paint;
             panelMenu.MouseDown += panelMenu_MouseDown;
@@ -146,10 +149,11 @@
             guna2Button2.Image = (Image)resources.GetObject("guna2Button2.Image");
             guna2Button2.ImageAlign = HorizontalAlignment.Left;
             guna2Button2.ImageSize = new Size(35, 35);
-            guna2Button2.Location = new Point(3, 288);
+            guna2Button2.Location = new Point(3, 384);
+            guna2Button2.Margin = new Padding(3, 4, 3, 4);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button2.Size = new Size(225, 40);
+            guna2Button2.Size = new Size(257, 53);
             guna2Button2.TabIndex = 9;
             guna2Button2.Text = "Inventario";
             guna2Button2.Click += guna2Button2_Click;
@@ -158,9 +162,10 @@
             // 
             ptbLogo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             ptbLogo.Image = (Image)resources.GetObject("ptbLogo.Image");
-            ptbLogo.Location = new Point(42, 28);
+            ptbLogo.Location = new Point(48, 37);
+            ptbLogo.Margin = new Padding(3, 4, 3, 4);
             ptbLogo.Name = "ptbLogo";
-            ptbLogo.Size = new Size(140, 91);
+            ptbLogo.Size = new Size(160, 121);
             ptbLogo.SizeMode = PictureBoxSizeMode.Zoom;
             ptbLogo.TabIndex = 8;
             ptbLogo.TabStop = false;
@@ -179,10 +184,11 @@
             btnMenu.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnMenu.ForeColor = Color.White;
             btnMenu.Image = (Image)resources.GetObject("btnMenu.Image");
-            btnMenu.Location = new Point(188, 5);
+            btnMenu.Location = new Point(215, 7);
+            btnMenu.Margin = new Padding(3, 4, 3, 4);
             btnMenu.Name = "btnMenu";
             btnMenu.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnMenu.Size = new Size(31, 29);
+            btnMenu.Size = new Size(35, 39);
             btnMenu.TabIndex = 7;
             btnMenu.Click += btnMenu_Click;
             // 
@@ -203,10 +209,11 @@
             BtnMiPerfil.Image = (Image)resources.GetObject("BtnMiPerfil.Image");
             BtnMiPerfil.ImageAlign = HorizontalAlignment.Left;
             BtnMiPerfil.ImageSize = new Size(30, 30);
-            BtnMiPerfil.Location = new Point(0, 489);
+            BtnMiPerfil.Location = new Point(0, 652);
+            BtnMiPerfil.Margin = new Padding(3, 4, 3, 4);
             BtnMiPerfil.Name = "BtnMiPerfil";
             BtnMiPerfil.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            BtnMiPerfil.Size = new Size(225, 40);
+            BtnMiPerfil.Size = new Size(257, 53);
             BtnMiPerfil.TabIndex = 6;
             BtnMiPerfil.Text = "   Mi Perfil";
             // 
@@ -227,10 +234,11 @@
             Btnhuesped.Image = (Image)resources.GetObject("Btnhuesped.Image");
             Btnhuesped.ImageAlign = HorizontalAlignment.Left;
             Btnhuesped.ImageSize = new Size(35, 35);
-            Btnhuesped.Location = new Point(0, 242);
+            Btnhuesped.Location = new Point(0, 323);
+            Btnhuesped.Margin = new Padding(3, 4, 3, 4);
             Btnhuesped.Name = "Btnhuesped";
             Btnhuesped.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            Btnhuesped.Size = new Size(225, 40);
+            Btnhuesped.Size = new Size(257, 53);
             Btnhuesped.TabIndex = 4;
             Btnhuesped.Text = "Objetos";
             // 
@@ -251,10 +259,11 @@
             BtnHabitaciones.Image = (Image)resources.GetObject("BtnHabitaciones.Image");
             BtnHabitaciones.ImageAlign = HorizontalAlignment.Left;
             BtnHabitaciones.ImageSize = new Size(40, 40);
-            BtnHabitaciones.Location = new Point(0, 203);
+            BtnHabitaciones.Location = new Point(0, 271);
+            BtnHabitaciones.Margin = new Padding(3, 4, 3, 4);
             BtnHabitaciones.Name = "BtnHabitaciones";
             BtnHabitaciones.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            BtnHabitaciones.Size = new Size(225, 40);
+            BtnHabitaciones.Size = new Size(257, 53);
             BtnHabitaciones.TabIndex = 3;
             BtnHabitaciones.Text = "   Ubicaciones ";
             // 
@@ -275,10 +284,11 @@
             BtnEmpleados.Image = (Image)resources.GetObject("BtnEmpleados.Image");
             BtnEmpleados.ImageAlign = HorizontalAlignment.Left;
             BtnEmpleados.ImageSize = new Size(34, 34);
-            BtnEmpleados.Location = new Point(0, 164);
+            BtnEmpleados.Location = new Point(0, 219);
+            BtnEmpleados.Margin = new Padding(3, 4, 3, 4);
             BtnEmpleados.Name = "BtnEmpleados";
             BtnEmpleados.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            BtnEmpleados.Size = new Size(225, 40);
+            BtnEmpleados.Size = new Size(257, 53);
             BtnEmpleados.TabIndex = 2;
             BtnEmpleados.Text = "Empleados";
             BtnEmpleados.Click += BtnEmpleados_Click;
@@ -300,10 +310,11 @@
             Btnpricipal.Image = (Image)resources.GetObject("Btnpricipal.Image");
             Btnpricipal.ImageAlign = HorizontalAlignment.Left;
             Btnpricipal.ImageSize = new Size(38, 38);
-            Btnpricipal.Location = new Point(0, 125);
+            Btnpricipal.Location = new Point(0, 167);
+            Btnpricipal.Margin = new Padding(3, 4, 3, 4);
             Btnpricipal.Name = "Btnpricipal";
             Btnpricipal.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            Btnpricipal.Size = new Size(225, 40);
+            Btnpricipal.Size = new Size(257, 53);
             Btnpricipal.TabIndex = 1;
             Btnpricipal.Text = "Limpieza";
             Btnpricipal.Click += Btnpricipal_Click;
@@ -322,8 +333,9 @@
             panel1.Dock = DockStyle.Top;
             panel1.ForeColor = Color.Coral;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1084, 20);
+            panel1.Size = new Size(1239, 27);
             panel1.TabIndex = 1;
             panel1.Paint += panel1_Paint;
             panel1.MouseDown += panel1_MouseDown;
@@ -339,10 +351,11 @@
             btnMaxi.FillColor = Color.FromArgb(190, 158, 68);
             btnMaxi.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnMaxi.ForeColor = Color.White;
-            btnMaxi.Location = new Point(1021, 0);
+            btnMaxi.Location = new Point(1167, 0);
+            btnMaxi.Margin = new Padding(3, 4, 3, 4);
             btnMaxi.Name = "btnMaxi";
             btnMaxi.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            btnMaxi.Size = new Size(25, 17);
+            btnMaxi.Size = new Size(29, 23);
             btnMaxi.TabIndex = 10;
             btnMaxi.Text = "0";
             btnMaxi.Click += btnMaxi_Click;
@@ -358,10 +371,11 @@
             btnResta.FillColor = Color.FromArgb(190, 158, 68);
             btnResta.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnResta.ForeColor = Color.White;
-            btnResta.Location = new Point(1021, 0);
+            btnResta.Location = new Point(1166, 0);
+            btnResta.Margin = new Padding(3, 4, 3, 4);
             btnResta.Name = "btnResta";
             btnResta.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            btnResta.Size = new Size(25, 17);
+            btnResta.Size = new Size(29, 23);
             btnResta.TabIndex = 11;
             btnResta.Text = "0";
             btnResta.Click += btnMini_Click;
@@ -377,10 +391,11 @@
             btnMinimi.FillColor = Color.FromArgb(190, 158, 68);
             btnMinimi.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnMinimi.ForeColor = Color.White;
-            btnMinimi.Location = new Point(990, 0);
+            btnMinimi.Location = new Point(1131, 0);
+            btnMinimi.Margin = new Padding(3, 4, 3, 4);
             btnMinimi.Name = "btnMinimi";
             btnMinimi.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            btnMinimi.Size = new Size(25, 17);
+            btnMinimi.Size = new Size(29, 23);
             btnMinimi.TabIndex = 11;
             btnMinimi.Text = "-";
             btnMinimi.Click += guna2Button3_Click;
@@ -396,10 +411,11 @@
             guna2Button4.FillColor = Color.FromArgb(190, 158, 68);
             guna2Button4.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
             guna2Button4.ForeColor = Color.White;
-            guna2Button4.Location = new Point(1052, 0);
+            guna2Button4.Location = new Point(1202, 0);
+            guna2Button4.Margin = new Padding(3, 4, 3, 4);
             guna2Button4.Name = "guna2Button4";
             guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            guna2Button4.Size = new Size(25, 17);
+            guna2Button4.Size = new Size(29, 23);
             guna2Button4.TabIndex = 9;
             guna2Button4.Text = "X";
             guna2Button4.Click += guna2Button4_Click;
@@ -415,10 +431,11 @@
             BtnRestaurar.FillColor = Color.FromArgb(190, 158, 68);
             BtnRestaurar.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
             BtnRestaurar.ForeColor = Color.White;
-            BtnRestaurar.Location = new Point(1951, 0);
+            BtnRestaurar.Location = new Point(2230, 0);
+            BtnRestaurar.Margin = new Padding(3, 4, 3, 4);
             BtnRestaurar.Name = "BtnRestaurar";
             BtnRestaurar.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            BtnRestaurar.Size = new Size(25, 17);
+            BtnRestaurar.Size = new Size(29, 23);
             BtnRestaurar.TabIndex = 7;
             BtnRestaurar.Text = "0";
             // 
@@ -433,10 +450,11 @@
             btnMinimizar.FillColor = Color.FromArgb(190, 158, 68);
             btnMinimizar.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnMinimizar.ForeColor = Color.White;
-            btnMinimizar.Location = new Point(1920, 0);
+            btnMinimizar.Location = new Point(2194, 0);
+            btnMinimizar.Margin = new Padding(3, 4, 3, 4);
             btnMinimizar.Name = "btnMinimizar";
             btnMinimizar.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            btnMinimizar.Size = new Size(25, 17);
+            btnMinimizar.Size = new Size(29, 23);
             btnMinimizar.TabIndex = 8;
             btnMinimizar.Text = "-";
             // 
@@ -451,10 +469,11 @@
             btnMaximizar.FillColor = Color.FromArgb(190, 158, 68);
             btnMaximizar.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnMaximizar.ForeColor = Color.White;
-            btnMaximizar.Location = new Point(1951, 0);
+            btnMaximizar.Location = new Point(2230, 0);
+            btnMaximizar.Margin = new Padding(3, 4, 3, 4);
             btnMaximizar.Name = "btnMaximizar";
             btnMaximizar.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            btnMaximizar.Size = new Size(25, 17);
+            btnMaximizar.Size = new Size(29, 23);
             btnMaximizar.TabIndex = 6;
             btnMaximizar.Text = "0";
             // 
@@ -469,21 +488,23 @@
             guna2Button1.FillColor = Color.FromArgb(190, 158, 68);
             guna2Button1.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
             guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(1982, 0);
+            guna2Button1.Location = new Point(2265, 0);
+            guna2Button1.Margin = new Padding(3, 4, 3, 4);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges30;
-            guna2Button1.Size = new Size(25, 17);
+            guna2Button1.Size = new Size(29, 23);
             guna2Button1.TabIndex = 5;
             guna2Button1.Text = "X";
             // 
             // FrmMenu
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1084, 561);
+            ClientSize = new Size(1239, 748);
             Controls.Add(panelPrincipal);
             IsMdiContainer = true;
-            MinimumSize = new Size(600, 480);
+            Margin = new Padding(3, 4, 3, 4);
+            MinimumSize = new Size(683, 624);
             Name = "FrmMenu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmMenu";
