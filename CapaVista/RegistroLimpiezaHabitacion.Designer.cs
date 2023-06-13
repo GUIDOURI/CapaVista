@@ -36,10 +36,8 @@
             label1 = new Label();
             groupBox1 = new GroupBox();
             textBox1 = new TextBox();
-            textBox2 = new TextBox();
             dateTimePicker1 = new DateTimePicker();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            label2 = new Label();
             label3 = new Label();
             comboBox1 = new ComboBox();
             label4 = new Label();
@@ -81,16 +79,9 @@
             textBox1.Size = new Size(143, 23);
             textBox1.TabIndex = 0;
             // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(25, 164);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(174, 23);
-            textBox2.TabIndex = 5;
-            // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(24, 270);
+            dateTimePicker1.Location = new Point(25, 267);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(272, 23);
             dateTimePicker1.TabIndex = 1;
@@ -114,25 +105,13 @@
             guna2Button2.TabIndex = 9;
             guna2Button2.Text = "REGISTRAR";
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Alegreya", 9.749998F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.FromArgb(190, 158, 68);
-            label2.Location = new Point(25, 132);
-            label2.Name = "label2";
-            label2.Size = new Size(71, 19);
-            label2.TabIndex = 1;
-            label2.Text = "ID Registro";
-            // 
             // label3
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Alegreya", 9.749998F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(190, 158, 68);
-            label3.Location = new Point(25, 190);
+            label3.Location = new Point(24, 160);
             label3.Name = "label3";
             label3.Size = new Size(132, 19);
             label3.TabIndex = 10;
@@ -141,7 +120,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(25, 222);
+            comboBox1.Location = new Point(25, 198);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(175, 23);
             comboBox1.TabIndex = 11;
@@ -152,7 +131,7 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Alegreya", 9.749998F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(190, 158, 68);
-            label4.Location = new Point(24, 248);
+            label4.Location = new Point(24, 236);
             label4.Name = "label4";
             label4.Size = new Size(40, 19);
             label4.TabIndex = 12;
@@ -165,7 +144,7 @@
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Alegreya", 9.749998F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.FromArgb(190, 158, 68);
-            label5.Location = new Point(24, 308);
+            label5.Location = new Point(24, 309);
             label5.Name = "label5";
             label5.Size = new Size(46, 19);
             label5.TabIndex = 13;
@@ -202,10 +181,8 @@
             Controls.Add(label4);
             Controls.Add(comboBox1);
             Controls.Add(label3);
-            Controls.Add(label2);
             Controls.Add(guna2Button2);
             Controls.Add(dateTimePicker1);
-            Controls.Add(textBox2);
             Controls.Add(groupBox1);
             Controls.Add(label1);
             ForeColor = SystemColors.ControlLightLight;
@@ -223,10 +200,8 @@
         private Label label1;
         private GroupBox groupBox1;
         private TextBox textBox1;
-        private TextBox textBox2;
         private DateTimePicker dateTimePicker1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Label label2;
         private Label label3;
         private ComboBox comboBox1;
         private Label label4;
