@@ -262,7 +262,9 @@ namespace Hotel
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-
+            FormInventario inventario   = new FormInventario();
+            inventario.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            AbrirFormPanel(inventario);
         }
 
         private void guna2Button3_Click_1(object sender, EventArgs e)
