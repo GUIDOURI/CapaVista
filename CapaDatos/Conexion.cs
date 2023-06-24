@@ -9,7 +9,7 @@ using MySql.Data.MySqlClient;
 
 namespace CapaDatos
 {
-    internal class Conexion
+    public class Conexion
     {
         private string CadenaConexion;
         private MySqlConnection conexion;
@@ -19,7 +19,7 @@ namespace CapaDatos
         {
             // Cadena de conexión a la base de datos
             string servidor = "localhost";
-            string baseDatos = "amadellaves";
+            string baseDatos = "hotel_amallaves";
             string usuario = "root";
             string contrasena = "";
             CadenaConexion = $"server={servidor};database={baseDatos};uid={usuario};pwd={contrasena};";

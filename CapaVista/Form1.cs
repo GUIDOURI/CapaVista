@@ -3,6 +3,8 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
+using CapaNegocio;
+
 namespace Hotel
 {
     public partial class Form1 : Form
@@ -192,39 +194,25 @@ namespace Hotel
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            string connectionString = "server=localhost;database=amadellaves;user=root;password='';";
+            string usuario = txtUsuario.Text;
+            string contrasena = txtContraseña.Text;
 
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            NegocioUsuario negocioUsuario = new NegocioUsuario();
+            bool esValido = negocioUsuario.ValidarUsuario(usuario, contrasena);
+
+            if (esValido)
             {
-                try
-                {
-                    connection.Open();
-
-                    string query = "SELECT COUNT(*) FROM usuarios WHERE Usuario = @Usuario AND password = @Contrasena";
-
-                    MySqlCommand command = new MySqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@Usuario", txtUsuario.Text);
-                    command.Parameters.AddWithValue("@Contrasena", txtContraseña.Text);
-
-                    int count = Convert.ToInt32(command.ExecuteScalar());
-
-                    if (count > 0)
-                    {
-
-                        FrmMenu menuForm = new FrmMenu();
-                        menuForm.Show();
-                        this.Hide();
-                        // Agrega aquí el código para redirigir al usuario a la siguiente ventana o realizar otras acciones después del inicio de sesión exitoso.
-                    }
-                    else
-                    {
-                        MessageBox.Show("Nombre de usuario o contraseña incorrectos");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al conectar a la base de datos: " + ex.Message);
-                }
+                MessageBox.Show("Inicio de sesión exitoso");
+                // Realiza las operaciones adicionales después de iniciar sesión             
+              
+                FrmMenu formMenu = new FrmMenu();
+                formMenu.Show();
+                this.Hide();
+              
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos");
             }
         }
 
