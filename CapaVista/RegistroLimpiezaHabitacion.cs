@@ -14,10 +14,11 @@ namespace CapaVista
 {
     public partial class RegistroLimpiezaHabitacion : Form
     {
-
+        private ReporteLimpiezaManager habitacionManager;
         public RegistroLimpiezaHabitacion()
         {
             InitializeComponent();
+            habitacionManager = new ReporteLimpiezaManager();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -27,7 +28,7 @@ namespace CapaVista
 
         private void RegistroLimpiezaHabitacion_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -39,20 +40,23 @@ namespace CapaVista
         {
 
         }
+        private void FormRegistroLimpieza_Load(object sender, EventArgs e)
+        {
+            CargarComboBoxHabitaciones();
+        }
+
+        private void CargarComboBoxHabitaciones()
+        {
+            DataTable dtHabitaciones = habitacionManager.ObtenerHabitaciones();
+
+            comboBoxNumHabitacion.DisplayMember = "num_habitacion";
+            comboBoxNumHabitacion.ValueMember = "id_habitacion";
+            comboBoxNumHabitacion.DataSource = dtHabitaciones;
+        }
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            int idHabitacion = Convert.ToInt32(comboBoxNumHabitacion.SelectedValue);
-            DateTime fecha = DateTime.Now;
-            string estado = txtEstado.Text;
-            string observaciones = txtObservaciones.Text;
-            int idInventario = Convert.ToInt32(comboBoxInventanrio.SelectedValue);
-            int idUsuario = Convert.ToInt32(comboBoxEmpleado.SelectedValue);
-
-            ReporteLimpiezaManager reporteLimpiezaManager = new ReporteLimpiezaManager();
-            reporteLimpiezaManager.InsertarRegistroLimpieza(idHabitacion, fecha, estado, observaciones, idInventario, idUsuario);
-
-            MessageBox.Show("Registro de limpieza insertado correctamente.");
+           
         }
     }
 }
