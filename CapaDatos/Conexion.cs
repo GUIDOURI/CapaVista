@@ -13,8 +13,8 @@ namespace CapaDatos
     {
         private string CadenaConexion;
         private MySqlConnection conexion;
-       
 
+       
         public Conexion()
         {
             // Cadena de conexión a la base de datos
@@ -27,7 +27,6 @@ namespace CapaDatos
             // Crear objeto MySqlConnection
             conexion = new MySqlConnection(CadenaConexion);
         }
-
 
         public MySqlConnection ObtenerConexion()
         {
@@ -56,6 +55,7 @@ namespace CapaDatos
                 conexion.Dispose();
             }
         }
+
 
        
     }
