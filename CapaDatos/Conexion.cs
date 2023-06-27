@@ -56,7 +56,25 @@ namespace CapaDatos
             }
         }
 
+        public void InsertarReporteLimpieza(int idHabitacion, DateTime fecha, string estado, string observaciones, int idInventario, int idUsuario)
+        {
+            string query = "INSERT INTO reporte_limpieza (id_habitacion, Fecha, estado, Observaciones, id_inventario, id_usuario) " +
+                           "VALUES (@idHabitacion, @fecha, @estado, @observaciones, @idInventario, @idUsuario)";
 
-       
+            using (MySqlCommand command = new MySqlCommand(query, conexion))
+            {
+                command.Parameters.AddWithValue("@idHabitacion", idHabitacion);
+                command.Parameters.AddWithValue("@fecha", fecha);
+                command.Parameters.AddWithValue("@estado", estado);
+                command.Parameters.AddWithValue("@observaciones", observaciones);
+                command.Parameters.AddWithValue("@idInventario", idInventario);
+                command.Parameters.AddWithValue("@idUsuario", idUsuario);
+
+                AbrirConexion();
+                command.ExecuteNonQuery();
+                CerrarConexion();
+            }
+        }
+
     }
 }

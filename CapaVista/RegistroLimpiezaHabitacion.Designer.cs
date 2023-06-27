@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroLimpiezaHabitacion));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             label3 = new Label();
@@ -47,12 +47,12 @@
             ColumnObservaciones = new DataGridViewTextBoxColumn();
             label5 = new Label();
             label2 = new Label();
-            comboBoxInventanrio = new ComboBox();
+            comboBoxInventario = new ComboBox();
             label4 = new Label();
             comboBoxEmpleado = new ComboBox();
             label6 = new Label();
             txtObservaciones = new TextBox();
-            comboBoxEstado = new ComboBox();
+            txtEstado = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -76,7 +76,7 @@
             // 
             guna2Button2.BackgroundImage = (Image)resources.GetObject("guna2Button2.BackgroundImage");
             guna2Button2.BackgroundImageLayout = ImageLayout.None;
-            guna2Button2.CustomizableEdges = customizableEdges1;
+            guna2Button2.CustomizableEdges = customizableEdges5;
             guna2Button2.DisabledState.BorderColor = Color.DarkGray;
             guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -86,7 +86,7 @@
             guna2Button2.ForeColor = Color.FromArgb(190, 158, 68);
             guna2Button2.Location = new Point(49, 434);
             guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2Button2.Size = new Size(151, 40);
             guna2Button2.TabIndex = 9;
             guna2Button2.Text = "REGISTRAR";
@@ -116,10 +116,10 @@
             // 
             guna2Panel1.BackgroundImage = (Image)resources.GetObject("guna2Panel1.BackgroundImage");
             guna2Panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            guna2Panel1.CustomizableEdges = customizableEdges3;
+            guna2Panel1.CustomizableEdges = customizableEdges7;
             guna2Panel1.Location = new Point(35, 23);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Panel1.Size = new Size(143, 121);
             guna2Panel1.TabIndex = 15;
             // 
@@ -190,13 +190,13 @@
             label2.TabIndex = 17;
             label2.Text = "Inventario";
             // 
-            // comboBoxInventanrio
+            // comboBoxInventario
             // 
-            comboBoxInventanrio.FormattingEnabled = true;
-            comboBoxInventanrio.Location = new Point(24, 286);
-            comboBoxInventanrio.Name = "comboBoxInventanrio";
-            comboBoxInventanrio.Size = new Size(195, 23);
-            comboBoxInventanrio.TabIndex = 18;
+            comboBoxInventario.FormattingEnabled = true;
+            comboBoxInventario.Location = new Point(24, 286);
+            comboBoxInventario.Name = "comboBoxInventario";
+            comboBoxInventario.Size = new Size(195, 23);
+            comboBoxInventario.TabIndex = 18;
             // 
             // label4
             // 
@@ -237,13 +237,12 @@
             txtObservaciones.Size = new Size(194, 23);
             txtObservaciones.TabIndex = 22;
             // 
-            // comboBoxEstado
+            // txtEstado
             // 
-            comboBoxEstado.FormattingEnabled = true;
-            comboBoxEstado.Location = new Point(24, 238);
-            comboBoxEstado.Name = "comboBoxEstado";
-            comboBoxEstado.Size = new Size(195, 23);
-            comboBoxEstado.TabIndex = 23;
+            txtEstado.Location = new Point(25, 238);
+            txtEstado.Name = "txtEstado";
+            txtEstado.Size = new Size(194, 23);
+            txtEstado.TabIndex = 23;
             // 
             // RegistroLimpiezaHabitacion
             // 
@@ -251,12 +250,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(26, 26, 26);
             ClientSize = new Size(1008, 486);
-            Controls.Add(comboBoxEstado);
+            Controls.Add(txtEstado);
             Controls.Add(txtObservaciones);
             Controls.Add(label6);
             Controls.Add(comboBoxEmpleado);
             Controls.Add(label4);
-            Controls.Add(comboBoxInventanrio);
+            Controls.Add(comboBoxInventario);
             Controls.Add(label2);
             Controls.Add(dataGridView1);
             Controls.Add(guna2Panel1);
@@ -284,17 +283,17 @@
         private DataGridView dataGridView1;
         private Label label5;
         private Label label2;
-        private ComboBox comboBoxInventanrio;
+        private ComboBox comboBoxInventario;
         private Label label4;
         private ComboBox comboBoxEmpleado;
         private Label label6;
         private TextBox txtObservaciones;
-        private ComboBox comboBoxEstado;
         private DataGridViewTextBoxColumn ColumnNumHabitacion;
         private DataGridViewTextBoxColumn ColumnFecha;
         private DataGridViewTextBoxColumn ColumnEstado;
         private DataGridViewTextBoxColumn ColumnInventario;
         private DataGridViewTextBoxColumn ColumnEmpleado;
         private DataGridViewTextBoxColumn ColumnObservaciones;
+        private TextBox txtEstado;
     }
 }

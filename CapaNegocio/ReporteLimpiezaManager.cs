@@ -12,18 +12,16 @@ namespace CapaNegocio
 {
     public class ReporteLimpiezaManager
     {
-        private HabitacionDAO habitacionDAO;
+        private Conexion conexion;
 
         public ReporteLimpiezaManager()
         {
-            habitacionDAO = new HabitacionDAO();
+            conexion = new Conexion();
         }
 
-        public DataTable ObtenerHabitaciones()
+        public void InsertarReporteLimpieza(int idHabitacion, DateTime fecha, string estado, string observaciones, int idInventario, int idUsuario)
         {
-            return habitacionDAO.ObtenerHabitaciones();
+            conexion.InsertarReporteLimpieza(idHabitacion, fecha, estado, observaciones, idInventario, idUsuario);
         }
-
-        // Resto del código de la clase HabitacionManager
     }
 }
