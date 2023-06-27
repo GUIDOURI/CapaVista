@@ -39,6 +39,12 @@
             comboBoxNumHabitacion = new ComboBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             dataGridView1 = new DataGridView();
+            ColumnNumHabitacion = new DataGridViewTextBoxColumn();
+            ColumnFecha = new DataGridViewTextBoxColumn();
+            ColumnEstado = new DataGridViewTextBoxColumn();
+            ColumnInventario = new DataGridViewTextBoxColumn();
+            ColumnEmpleado = new DataGridViewTextBoxColumn();
+            ColumnObservaciones = new DataGridViewTextBoxColumn();
             label5 = new Label();
             label2 = new Label();
             comboBoxInventanrio = new ComboBox();
@@ -47,12 +53,6 @@
             label6 = new Label();
             txtObservaciones = new TextBox();
             comboBoxEstado = new ComboBox();
-            ColumnNumHabitacion = new DataGridViewTextBoxColumn();
-            ColumnFecha = new DataGridViewTextBoxColumn();
-            ColumnEstado = new DataGridViewTextBoxColumn();
-            ColumnInventario = new DataGridViewTextBoxColumn();
-            ColumnEmpleado = new DataGridViewTextBoxColumn();
-            ColumnObservaciones = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -64,11 +64,11 @@
             label1.Font = new Font("Alegreya", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(190, 158, 68);
             label1.ImageAlign = ContentAlignment.TopLeft;
-            label1.Location = new Point(413, 23);
+            label1.Location = new Point(325, 23);
             label1.Name = "label1";
-            label1.Size = new Size(274, 35);
+            label1.Size = new Size(447, 35);
             label1.TabIndex = 0;
-            label1.Text = "REGISTRO DE LIMPIEZA";
+            label1.Text = "REGISTRO DE LIMPIEZA HABITACIONES";
             label1.TextAlign = ContentAlignment.TopCenter;
             label1.Click += label1_Click;
             // 
@@ -134,6 +134,37 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(741, 379);
             dataGridView1.TabIndex = 16;
+            // 
+            // ColumnNumHabitacion
+            // 
+            ColumnNumHabitacion.HeaderText = "NUMERO";
+            ColumnNumHabitacion.Name = "ColumnNumHabitacion";
+            // 
+            // ColumnFecha
+            // 
+            ColumnFecha.HeaderText = "FECHA Y HORA";
+            ColumnFecha.Name = "ColumnFecha";
+            // 
+            // ColumnEstado
+            // 
+            ColumnEstado.HeaderText = "ESTADO";
+            ColumnEstado.Name = "ColumnEstado";
+            // 
+            // ColumnInventario
+            // 
+            ColumnInventario.HeaderText = "INVENTARIO";
+            ColumnInventario.Name = "ColumnInventario";
+            // 
+            // ColumnEmpleado
+            // 
+            ColumnEmpleado.HeaderText = "EMPLEADO";
+            ColumnEmpleado.Name = "ColumnEmpleado";
+            // 
+            // ColumnObservaciones
+            // 
+            ColumnObservaciones.HeaderText = "OBSERVACIONES";
+            ColumnObservaciones.Name = "ColumnObservaciones";
+            ColumnObservaciones.Width = 200;
             // 
             // label5
             // 
@@ -213,37 +244,6 @@
             comboBoxEstado.Name = "comboBoxEstado";
             comboBoxEstado.Size = new Size(195, 23);
             comboBoxEstado.TabIndex = 23;
-            // 
-            // ColumnNumHabitacion
-            // 
-            ColumnNumHabitacion.HeaderText = "NUMERO";
-            ColumnNumHabitacion.Name = "ColumnNumHabitacion";
-            // 
-            // ColumnFecha
-            // 
-            ColumnFecha.HeaderText = "FECHA Y HORA";
-            ColumnFecha.Name = "ColumnFecha";
-            // 
-            // ColumnEstado
-            // 
-            ColumnEstado.HeaderText = "ESTADO";
-            ColumnEstado.Name = "ColumnEstado";
-            // 
-            // ColumnInventario
-            // 
-            ColumnInventario.HeaderText = "INVENTARIO";
-            ColumnInventario.Name = "ColumnInventario";
-            // 
-            // ColumnEmpleado
-            // 
-            ColumnEmpleado.HeaderText = "EMPLEADO";
-            ColumnEmpleado.Name = "ColumnEmpleado";
-            // 
-            // ColumnObservaciones
-            // 
-            ColumnObservaciones.HeaderText = "OBSERVACIONES";
-            ColumnObservaciones.Name = "ColumnObservaciones";
-            ColumnObservaciones.Width = 200;
             // 
             // RegistroLimpiezaHabitacion
             // 
