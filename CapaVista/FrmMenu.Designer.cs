@@ -96,7 +96,7 @@
             panelPrincipal.Dock = DockStyle.Fill;
             panelPrincipal.Location = new Point(0, 0);
             panelPrincipal.Name = "panelPrincipal";
-            panelPrincipal.Size = new Size(1084, 561);
+            panelPrincipal.Size = new Size(1311, 593);
             panelPrincipal.TabIndex = 0;
             // 
             // panelContenedor
@@ -105,7 +105,7 @@
             panelContenedor.Dock = DockStyle.Fill;
             panelContenedor.Location = new Point(225, 20);
             panelContenedor.Name = "panelContenedor";
-            panelContenedor.Size = new Size(859, 541);
+            panelContenedor.Size = new Size(1086, 573);
             panelContenedor.TabIndex = 3;
             panelContenedor.Paint += panelContenedor_Paint;
             panelContenedor.MouseDown += panelContenedor_MouseDown;
@@ -124,7 +124,7 @@
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 20);
             panelMenu.Name = "panelMenu";
-            panelMenu.Size = new Size(225, 541);
+            panelMenu.Size = new Size(225, 573);
             panelMenu.TabIndex = 2;
             panelMenu.Paint += panelMenu_Paint;
             panelMenu.MouseDown += panelMenu_MouseDown;
@@ -324,7 +324,7 @@
             panel1.ForeColor = Color.Coral;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1084, 20);
+            panel1.Size = new Size(1311, 20);
             panel1.TabIndex = 1;
             panel1.Paint += panel1_Paint;
             panel1.MouseDown += panel1_MouseDown;
@@ -340,7 +340,7 @@
             btnMaxi.FillColor = Color.FromArgb(190, 158, 68);
             btnMaxi.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnMaxi.ForeColor = Color.White;
-            btnMaxi.Location = new Point(1021, 0);
+            btnMaxi.Location = new Point(1248, 0);
             btnMaxi.Name = "btnMaxi";
             btnMaxi.ShadowDecoration.CustomizableEdges = customizableEdges16;
             btnMaxi.Size = new Size(25, 17);
@@ -359,7 +359,7 @@
             btnResta.FillColor = Color.FromArgb(190, 158, 68);
             btnResta.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnResta.ForeColor = Color.White;
-            btnResta.Location = new Point(1020, 0);
+            btnResta.Location = new Point(1247, 0);
             btnResta.Name = "btnResta";
             btnResta.ShadowDecoration.CustomizableEdges = customizableEdges18;
             btnResta.Size = new Size(25, 17);
@@ -378,7 +378,7 @@
             btnMinimi.FillColor = Color.FromArgb(190, 158, 68);
             btnMinimi.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnMinimi.ForeColor = Color.White;
-            btnMinimi.Location = new Point(990, 0);
+            btnMinimi.Location = new Point(1217, 0);
             btnMinimi.Name = "btnMinimi";
             btnMinimi.ShadowDecoration.CustomizableEdges = customizableEdges20;
             btnMinimi.Size = new Size(25, 17);
@@ -397,7 +397,7 @@
             guna2Button4.FillColor = Color.FromArgb(190, 158, 68);
             guna2Button4.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
             guna2Button4.ForeColor = Color.White;
-            guna2Button4.Location = new Point(1052, 0);
+            guna2Button4.Location = new Point(1279, 0);
             guna2Button4.Name = "guna2Button4";
             guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges22;
             guna2Button4.Size = new Size(25, 17);
@@ -416,7 +416,7 @@
             BtnRestaurar.FillColor = Color.FromArgb(190, 158, 68);
             BtnRestaurar.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
             BtnRestaurar.ForeColor = Color.White;
-            BtnRestaurar.Location = new Point(1951, 0);
+            BtnRestaurar.Location = new Point(2178, 0);
             BtnRestaurar.Name = "BtnRestaurar";
             BtnRestaurar.ShadowDecoration.CustomizableEdges = customizableEdges24;
             BtnRestaurar.Size = new Size(25, 17);
@@ -434,7 +434,7 @@
             btnMinimizar.FillColor = Color.FromArgb(190, 158, 68);
             btnMinimizar.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnMinimizar.ForeColor = Color.White;
-            btnMinimizar.Location = new Point(1920, 0);
+            btnMinimizar.Location = new Point(2147, 0);
             btnMinimizar.Name = "btnMinimizar";
             btnMinimizar.ShadowDecoration.CustomizableEdges = customizableEdges26;
             btnMinimizar.Size = new Size(25, 17);
@@ -452,7 +452,7 @@
             btnMaximizar.FillColor = Color.FromArgb(190, 158, 68);
             btnMaximizar.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnMaximizar.ForeColor = Color.White;
-            btnMaximizar.Location = new Point(1951, 0);
+            btnMaximizar.Location = new Point(2178, 0);
             btnMaximizar.Name = "btnMaximizar";
             btnMaximizar.ShadowDecoration.CustomizableEdges = customizableEdges28;
             btnMaximizar.Size = new Size(25, 17);
@@ -470,7 +470,7 @@
             guna2Button1.FillColor = Color.FromArgb(190, 158, 68);
             guna2Button1.Font = new Font("Microsoft Sans Serif", 3.75F, FontStyle.Bold, GraphicsUnit.Point);
             guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(1982, 0);
+            guna2Button1.Location = new Point(2209, 0);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges30;
             guna2Button1.Size = new Size(25, 17);
@@ -481,7 +481,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1084, 561);
+            ClientSize = new Size(1311, 593);
             Controls.Add(panelPrincipal);
             IsMdiContainer = true;
             MinimumSize = new Size(600, 478);

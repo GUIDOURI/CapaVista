@@ -203,7 +203,7 @@ namespace Hotel
 
         private void Btnpricipal_Click(object sender, EventArgs e)
         {
-            FormLimpieza limpieza = new FormLimpieza();
+            RegistroLimpiezaHabitacion limpieza = new RegistroLimpiezaHabitacion();
             limpieza.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
             AbrirFormPanel(limpieza);
         }
@@ -262,7 +262,7 @@ namespace Hotel
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            FormInventario inventario   = new FormInventario();
+            FormInventario inventario = new FormInventario();
             inventario.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
             AbrirFormPanel(inventario);
         }

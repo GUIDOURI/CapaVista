@@ -135,12 +135,13 @@
             txtContraseña.Location = new Point(230, 384);
             txtContraseña.Margin = new Padding(3, 4, 3, 4);
             txtContraseña.Name = "txtContraseña";
-            txtContraseña.PasswordChar = '\0';
+            txtContraseña.PasswordChar = '●';
             txtContraseña.PlaceholderText = "";
             txtContraseña.SelectedText = "";
             txtContraseña.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtContraseña.Size = new Size(331, 33);
             txtContraseña.TabIndex = 4;
+            txtContraseña.UseSystemPasswordChar = true;
             // 
             // txtUsuario
             // 

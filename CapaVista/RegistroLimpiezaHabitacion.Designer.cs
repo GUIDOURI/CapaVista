@@ -29,22 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroLimpiezaHabitacion));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             label3 = new Label();
             comboBoxNumHabitacion = new ComboBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             dataGridView1 = new DataGridView();
-            ColumnNumHabitacion = new DataGridViewTextBoxColumn();
-            ColumnFecha = new DataGridViewTextBoxColumn();
-            ColumnEstado = new DataGridViewTextBoxColumn();
-            ColumnInventario = new DataGridViewTextBoxColumn();
-            ColumnEmpleado = new DataGridViewTextBoxColumn();
-            ColumnObservaciones = new DataGridViewTextBoxColumn();
             label5 = new Label();
             label2 = new Label();
             comboBoxInventanrio = new ComboBox();
@@ -52,7 +46,13 @@
             comboBoxEmpleado = new ComboBox();
             label6 = new Label();
             txtObservaciones = new TextBox();
-            txtEstado = new TextBox();
+            comboBoxEstado = new ComboBox();
+            ColumnNumHabitacion = new DataGridViewTextBoxColumn();
+            ColumnFecha = new DataGridViewTextBoxColumn();
+            ColumnEstado = new DataGridViewTextBoxColumn();
+            ColumnInventario = new DataGridViewTextBoxColumn();
+            ColumnEmpleado = new DataGridViewTextBoxColumn();
+            ColumnObservaciones = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -76,7 +76,7 @@
             // 
             guna2Button2.BackgroundImage = (Image)resources.GetObject("guna2Button2.BackgroundImage");
             guna2Button2.BackgroundImageLayout = ImageLayout.None;
-            guna2Button2.CustomizableEdges = customizableEdges5;
+            guna2Button2.CustomizableEdges = customizableEdges1;
             guna2Button2.DisabledState.BorderColor = Color.DarkGray;
             guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -84,9 +84,9 @@
             guna2Button2.FillColor = Color.Transparent;
             guna2Button2.Font = new Font("Alegreya", 11.2499981F, FontStyle.Bold, GraphicsUnit.Point);
             guna2Button2.ForeColor = Color.FromArgb(190, 158, 68);
-            guna2Button2.Location = new Point(79, 434);
+            guna2Button2.Location = new Point(49, 434);
             guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Button2.Size = new Size(151, 40);
             guna2Button2.TabIndex = 9;
             guna2Button2.Text = "REGISTRAR";
@@ -116,10 +116,10 @@
             // 
             guna2Panel1.BackgroundImage = (Image)resources.GetObject("guna2Panel1.BackgroundImage");
             guna2Panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            guna2Panel1.CustomizableEdges = customizableEdges7;
+            guna2Panel1.CustomizableEdges = customizableEdges3;
             guna2Panel1.Location = new Point(35, 23);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Panel1.Size = new Size(143, 121);
             guna2Panel1.TabIndex = 15;
             // 
@@ -129,42 +129,11 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ColumnNumHabitacion, ColumnFecha, ColumnEstado, ColumnInventario, ColumnEmpleado, ColumnObservaciones });
             dataGridView1.GridColor = Color.Silver;
-            dataGridView1.Location = new Point(312, 95);
+            dataGridView1.Location = new Point(237, 95);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(771, 379);
+            dataGridView1.Size = new Size(741, 379);
             dataGridView1.TabIndex = 16;
-            // 
-            // ColumnNumHabitacion
-            // 
-            ColumnNumHabitacion.HeaderText = "NumHabitacion";
-            ColumnNumHabitacion.Name = "ColumnNumHabitacion";
-            // 
-            // ColumnFecha
-            // 
-            ColumnFecha.HeaderText = "FECHA y HORA";
-            ColumnFecha.Name = "ColumnFecha";
-            // 
-            // ColumnEstado
-            // 
-            ColumnEstado.HeaderText = "ESTADO";
-            ColumnEstado.Name = "ColumnEstado";
-            // 
-            // ColumnInventario
-            // 
-            ColumnInventario.HeaderText = "INVENTARIO";
-            ColumnInventario.Name = "ColumnInventario";
-            // 
-            // ColumnEmpleado
-            // 
-            ColumnEmpleado.HeaderText = "EMPLEANDO";
-            ColumnEmpleado.Name = "ColumnEmpleado";
-            // 
-            // ColumnObservaciones
-            // 
-            ColumnObservaciones.HeaderText = "OBSERVACIONES";
-            ColumnObservaciones.Name = "ColumnObservaciones";
-            ColumnObservaciones.Width = 200;
             // 
             // label5
             // 
@@ -195,7 +164,7 @@
             comboBoxInventanrio.FormattingEnabled = true;
             comboBoxInventanrio.Location = new Point(24, 286);
             comboBoxInventanrio.Name = "comboBoxInventanrio";
-            comboBoxInventanrio.Size = new Size(272, 23);
+            comboBoxInventanrio.Size = new Size(195, 23);
             comboBoxInventanrio.TabIndex = 18;
             // 
             // label4
@@ -215,7 +184,7 @@
             comboBoxEmpleado.FormattingEnabled = true;
             comboBoxEmpleado.Location = new Point(25, 346);
             comboBoxEmpleado.Name = "comboBoxEmpleado";
-            comboBoxEmpleado.Size = new Size(272, 23);
+            comboBoxEmpleado.Size = new Size(194, 23);
             comboBoxEmpleado.TabIndex = 20;
             // 
             // label6
@@ -234,23 +203,55 @@
             // 
             txtObservaciones.Location = new Point(25, 394);
             txtObservaciones.Name = "txtObservaciones";
-            txtObservaciones.Size = new Size(271, 23);
+            txtObservaciones.Size = new Size(194, 23);
             txtObservaciones.TabIndex = 22;
             // 
-            // txtEstado
+            // comboBoxEstado
             // 
-            txtEstado.Location = new Point(24, 238);
-            txtEstado.Name = "txtEstado";
-            txtEstado.Size = new Size(271, 23);
-            txtEstado.TabIndex = 23;
+            comboBoxEstado.FormattingEnabled = true;
+            comboBoxEstado.Location = new Point(24, 238);
+            comboBoxEstado.Name = "comboBoxEstado";
+            comboBoxEstado.Size = new Size(195, 23);
+            comboBoxEstado.TabIndex = 23;
+            // 
+            // ColumnNumHabitacion
+            // 
+            ColumnNumHabitacion.HeaderText = "NUMERO";
+            ColumnNumHabitacion.Name = "ColumnNumHabitacion";
+            // 
+            // ColumnFecha
+            // 
+            ColumnFecha.HeaderText = "FECHA Y HORA";
+            ColumnFecha.Name = "ColumnFecha";
+            // 
+            // ColumnEstado
+            // 
+            ColumnEstado.HeaderText = "ESTADO";
+            ColumnEstado.Name = "ColumnEstado";
+            // 
+            // ColumnInventario
+            // 
+            ColumnInventario.HeaderText = "INVENTARIO";
+            ColumnInventario.Name = "ColumnInventario";
+            // 
+            // ColumnEmpleado
+            // 
+            ColumnEmpleado.HeaderText = "EMPLEADO";
+            ColumnEmpleado.Name = "ColumnEmpleado";
+            // 
+            // ColumnObservaciones
+            // 
+            ColumnObservaciones.HeaderText = "OBSERVACIONES";
+            ColumnObservaciones.Name = "ColumnObservaciones";
+            ColumnObservaciones.Width = 200;
             // 
             // RegistroLimpiezaHabitacion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(26, 26, 26);
-            ClientSize = new Size(1095, 486);
-            Controls.Add(txtEstado);
+            ClientSize = new Size(1008, 486);
+            Controls.Add(comboBoxEstado);
             Controls.Add(txtObservaciones);
             Controls.Add(label6);
             Controls.Add(comboBoxEmpleado);
@@ -288,7 +289,7 @@
         private ComboBox comboBoxEmpleado;
         private Label label6;
         private TextBox txtObservaciones;
-        private TextBox txtEstado;
+        private ComboBox comboBoxEstado;
         private DataGridViewTextBoxColumn ColumnNumHabitacion;
         private DataGridViewTextBoxColumn ColumnFecha;
         private DataGridViewTextBoxColumn ColumnEstado;

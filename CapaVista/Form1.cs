@@ -202,13 +202,14 @@ namespace Hotel
 
             if (esValido)
             {
-                MessageBox.Show("Inicio de sesión exitoso");
+                //Mensaje de inicio eliminado
+                //MessageBox.Show("Inicio de sesión exitoso");
                 // Realiza las operaciones adicionales después de iniciar sesión             
-              
+
                 FrmMenu formMenu = new FrmMenu();
                 formMenu.Show();
                 this.Hide();
-              
+
             }
             else
             {

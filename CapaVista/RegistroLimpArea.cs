@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace CapaVista
 {
-    public partial class FormLimpieza : Form
+    public partial class RegistroLimpArea : Form
     {
-        public FormLimpieza()
+        public RegistroLimpArea()
         {
             InitializeComponent();
         }
