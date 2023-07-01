@@ -1,27 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using CapaDatos;
+using CapaNegocio.Modelos;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CapaDatos;
-using MySql.Data.MySqlClient;
-
 
 namespace CapaNegocio
 {
     public class ReporteLimpiezaManager
     {
-        private Conexion conexion;
-
         public ReporteLimpiezaManager()
         {
-            conexion = new Conexion();
+            
         }
 
-        public void InsertarReporteLimpieza(int idHabitacion, DateTime fecha, string estado, string observaciones, int idInventario, int idUsuario)
+        public bool InsertarReporteLimpieza(Limpieza limpieza)
+        {        
+
+            bool resp = new LimpiezaHabitacionDAO().GuardarLimpieza(limpieza.IdHabitacion, limpieza.FechaLimpieza, limpieza.Observaciones, limpieza.IdInventario, limpieza.IdUsuario);
+
+            return resp;
+        }
+
+        public DataTable ListaReporteLimpieza()
         {
-            conexion.InsertarReporteLimpieza(idHabitacion, fecha, estado, observaciones, idInventario, idUsuario);
+            return new LimpiezaHabitacionDAO().ListaReportesLimpieza();
         }
     }
 }

@@ -3,9 +3,9 @@ using System.Data;
 
 namespace CapaDatos
 {
-    public class HabitacionDAO : BaseDAO
+    public class EmpleadoDAO : BaseDAO
     {
-        public DataTable ObtenerHabitaciones()
+        public DataTable ObtenerEmpleados()
         {
             MySqlConnection connection = conexion.ObtenerConexion();
             DataTable dtHabitaciones = new DataTable();
@@ -14,14 +14,13 @@ namespace CapaDatos
             {
                 connection.Open();
 
-                string query = "SELECT id_habitacion Id, numhabitacion Nro, id_tipohabitacion IdTipoHabitacion, precio Precio, estado Estado FROM habitacion";
+                string query = "SELECT id_usuario Id, CONCAT(nombre, ' ', apellidos) Nombre, ci Ci, id_rol IdRol, estado Estado FROM usuario";
                 MySqlCommand command = new MySqlCommand(query, connection);
                 MySqlDataAdapter adapter = new MySqlDataAdapter(command);
                 adapter.Fill(dtHabitaciones);
             }
             catch (MySqlException ex)
             {
-                // Manejo de excepciones
                 Console.WriteLine("Error al obtener las habitaciones: " + ex.Message);
             }
             finally
@@ -31,7 +30,6 @@ namespace CapaDatos
 
             return dtHabitaciones;
         }
-
-        // Resto del código de la clase HabitacionDAO
     }
 }
+
