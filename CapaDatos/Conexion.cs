@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Common;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 using MySql.Data.MySqlClient;
+using System.Configuration;
 
 namespace CapaDatos
 {
@@ -22,7 +17,8 @@ namespace CapaDatos
             string baseDatos = "hotel_amallaves";
             string usuario = "root";
             string contrasena = "";
-            CadenaConexion = $"server={servidor};database={baseDatos};uid={usuario};pwd={contrasena};";
+            //CadenaConexion = $"server={servidor};database={baseDatos};uid={usuario};pwd={contrasena};";
+            CadenaConexion = ConfigurationManager.ConnectionStrings["mysql"].ConnectionString;
 
             // Crear objeto MySqlConnection
             conexion = new MySqlConnection(CadenaConexion);
