@@ -198,7 +198,7 @@ namespace Hotel
                 fh.Show();
             }
             catch { }
-            
+
         }
 
         private void Btnpricipal_Click(object sender, EventArgs e)
