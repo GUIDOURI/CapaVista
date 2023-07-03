@@ -1,16 +1,5 @@
 ﻿using CapaVista;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-
 
 namespace Hotel
 {
@@ -18,18 +7,22 @@ namespace Hotel
     {
         //Fields
         private int borderSize = 2;
+
         private Size formSize;
+
         public FrmMenu()
         {
             InitializeComponent();
             this.Padding = new Padding(borderSize);//Border size
             this.BackColor = Color.FromArgb(190, 158, 68);//Border color
         }
+
         //Drag Form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
+        private static extern void ReleaseCapture();
+
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private static extern void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -45,7 +38,9 @@ namespace Hotel
             const int SC_RESTORE = 0xF120; //Restore form (Before)
             const int WM_NCHITTEST = 0x0084;//Win32, Mouse Input Notification: Determine what part of the window corresponds to a point, allows to resize the form.
             const int resizeAreaSize = 10;
+
             #region Form Resize
+
             // Resize/WM_NCHITTEST values
             const int HTCLIENT = 1; //Represents the client area of the window
             const int HTLEFT = 10;  //Left border of a window, allows resize horizontally to the left
@@ -64,11 +59,11 @@ namespace Hotel
                 {
                     if ((int)m.Result == HTCLIENT)//If the result of the m (mouse pointer) is in the client area of the window
                     {
-                        Point screenPoint = new Point(m.LParam.ToInt32()); //Gets screen point coordinates(X and Y coordinate of the pointer)                           
-                        Point clientPoint = this.PointToClient(screenPoint); //Computes the location of the screen point into client coordinates                          
+                        Point screenPoint = new Point(m.LParam.ToInt32()); //Gets screen point coordinates(X and Y coordinate of the pointer)
+                        Point clientPoint = this.PointToClient(screenPoint); //Computes the location of the screen point into client coordinates
                         if (clientPoint.Y <= resizeAreaSize)//If the pointer is at the top of the form (within the resize area- X coordinate)
                         {
-                            if (clientPoint.X <= resizeAreaSize) //If the pointer is at the coordinate X=0 or less than the resizing area(X=10) in 
+                            if (clientPoint.X <= resizeAreaSize) //If the pointer is at the coordinate X=0 or less than the resizing area(X=10) in
                                 m.Result = (IntPtr)HTTOPLEFT; //Resize diagonally to the left
                             else if (clientPoint.X < (this.Size.Width - resizeAreaSize))//If the pointer is at the coordinate X=11 or less than the width of the form(X=Form.Width-resizeArea)
                                 m.Result = (IntPtr)HTTOP; //Resize vertically up
@@ -95,7 +90,9 @@ namespace Hotel
                 }
                 return;
             }
-            #endregion
+
+            #endregion Form Resize
+
             //Remove border and keep snap window
             if (m.Msg == WM_NCCALCSIZE && m.WParam.ToInt32() == 1)
             {
@@ -106,9 +103,9 @@ namespace Hotel
             {
                 /// <see cref="https://docs.microsoft.com/en-us/windows/win32/menurc/wm-syscommand"/>
                 /// Quote:
-                /// In WM_SYSCOMMAND messages, the four low - order bits of the wParam parameter 
-                /// are used internally by the system.To obtain the correct result when testing 
-                /// the value of wParam, an application must combine the value 0xFFF0 with the 
+                /// In WM_SYSCOMMAND messages, the four low - order bits of the wParam parameter
+                /// are used internally by the system.To obtain the correct result when testing
+                /// the value of wParam, an application must combine the value 0xFFF0 with the
                 /// wParam value by using the bitwise AND operator.
                 int wParam = (m.WParam.ToInt32() & 0xFFF0);
                 if (wParam == SC_MINIMIZE)  //Before
@@ -126,6 +123,7 @@ namespace Hotel
                 case FormWindowState.Maximized: //Maximized form (After)
                     this.Padding = new Padding(8, 8, 8, 0);
                     break;
+
                 case FormWindowState.Normal: //Restored form (After)
                     if (this.Padding.Top != borderSize)
                         this.Padding = new Padding(borderSize);
@@ -156,8 +154,6 @@ namespace Hotel
             formSize = this.ClientSize;
         }
 
-
-
         private void btnMenu_Click(object sender, EventArgs e)
         {
             //-------CON EFECTO SLIDING
@@ -169,7 +165,7 @@ namespace Hotel
             {
                 this.tmextraerMenu.Start();
             }*/
-            //-------SIN EFECTO 
+            //-------SIN EFECTO
             if (panelMenu.Width == 55)
             {
                 panelMenu.Width = 230;
@@ -180,13 +176,12 @@ namespace Hotel
 
         private void panelContenedor_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void panelMenu_Paint(object sender, PaintEventArgs e)
         {
-
         }
+
         //abrir los formularios en el principal
         private void AbrirFormPanel(object formHijo)
         {
@@ -220,14 +215,13 @@ namespace Hotel
             AbrirFormPanel(new FrmMenu());
         }
 
-
         private void guna2Button3_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        int lx, ly;
-        int sw, sh;
+        private int lx, ly;
+        private int sw, sh;
 
         private void btnMini_Click(object sender, EventArgs e)
         {
@@ -252,7 +246,6 @@ namespace Hotel
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
@@ -274,7 +267,12 @@ namespace Hotel
             AbrirFormPanel(inspeccion);
         }
 
-
+        private void BtnLimpAreas_Click(object sender, EventArgs e)
+        {
+            RegistroLimpArea limpieza = new RegistroLimpArea();
+            limpieza.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            AbrirFormPanel(limpieza);
+        }
 
         /*private void tmextraerMenu_Tick(object sender, EventArgs e)
         {

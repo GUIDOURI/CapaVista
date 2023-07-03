@@ -35,46 +35,80 @@ namespace CapaVista
         {
             ComunesVista.CargarDatosComoBox<Habitacion>(comboBoxNumHabitacion, habitacions, "Id", "Nro", "--Seleccione habitacion--");
         }
+        private void LimpiarCampos()
+        {
+            comboBoxEmpleado.ResetText();
+            comboBoxInventario.ResetText();
+            comboBoxNumHabitacion.ResetText();
+            txtEstado.ResetText();
+            txtObservaciones.ResetText();
+        }
 
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-
-            string idHabitacion = comboBoxNumHabitacion.SelectedValue.ToString();
-            DateTime fecha = DateTime.Now;
-            string estado = txtEstado.Text;
-            string observaciones = txtObservaciones.Text;
-            int idInventario = Convert.ToInt32(comboBoxInventario.SelectedValue);
-            int idUsuario = Convert.ToInt32(comboBoxEmpleado.SelectedValue);
-
-            Limpieza limpieza = new Limpieza()
+            try
             {
-                IdHabitacion = idHabitacion,
-                FechaLimpieza = fecha,
-                Observaciones = observaciones,
-                IdInventario = idInventario,
-                IdUsuario = idUsuario
-            };
+                string idHabitacion = comboBoxNumHabitacion.SelectedValue.ToString();
+                DateTime fecha = DateTime.Now;
+                string estado = txtEstado.Text;
+                string observaciones = txtObservaciones.Text;
+                int idInventario = Convert.ToInt32(comboBoxInventario.SelectedValue);
+                int idUsuario = Convert.ToInt32(comboBoxEmpleado.SelectedValue);
 
-            ReporteLimpiezaManager reporteLimpiezaManager = new ReporteLimpiezaManager();
-           
-            try {
-                bool resp = reporteLimpiezaManager.InsertarReporteLimpieza(limpieza);
-                if (resp)
+                if (string.IsNullOrEmpty(idHabitacion))
                 {
-                    LoadDataGredview();
-                    MessageBox.Show("Registro de limpieza realizado correctamente.");
+                    MessageBox.Show("Seleccione una habitación.");
+                    return;
                 }
-                else
+                if (string.IsNullOrEmpty(estado))
                 {
-                    MessageBox.Show("Registro de limpieza no guardo.");
+                    MessageBox.Show("Proporcione un estado.");
+                    return;
+                }
+                if (idInventario <= 0)
+                {
+                    MessageBox.Show("Seleccione inventario.");
+                    return;
+                }
+                if (idUsuario <= 0)
+                {
+                    MessageBox.Show("Seleccione un empleado.");
+                    return;
+                }
+
+                Limpieza limpieza = new Limpieza()
+                {
+                    IdHabitacion = idHabitacion,
+                    FechaLimpieza = fecha,
+                    Observaciones = observaciones,
+                    IdInventario = idInventario,
+                    IdUsuario = idUsuario,
+                    Estado = estado
+                };
+
+                ReporteLimpiezaManager reporteLimpiezaManager = new ReporteLimpiezaManager();
+
+                try
+                {
+                    bool resp = reporteLimpiezaManager.InsertarReporteLimpieza(limpieza);
+                    if (resp)
+                    {
+                        LoadDataGredview();
+                        LimpiarCampos();
+                        MessageBox.Show("Registro de limpieza realizado correctamente.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Registro de limpieza no guardo.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
                 }
             }
-            catch(Exception ex) {
-                MessageBox.Show(ex.Message);
-            }
-
-            
+            catch(Exception) { }            
         }
 
         private void LoadDataGredview()

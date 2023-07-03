@@ -8,5 +8,6 @@
         public string Observaciones { get; set; }
         public int IdInventario { get; set; }
         public int IdUsuario { get; set; }
+        public string Estado { get; set; }
     }
 }

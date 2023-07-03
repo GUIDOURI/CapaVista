@@ -52,7 +52,7 @@ namespace CapaDatos
             command.ExecuteNonQuery();
         }
 
-        public bool GuardarLimpieza(string idHabitacion, DateTime fechaLimpieza, string observaciones, int idInventario, int idUsuario)
+        public bool GuardarLimpieza(string idHabitacion, DateTime fechaLimpieza, string observaciones, int idInventario, int idUsuario, string estado)
         {
             bool result = false;
             using (MySqlConnection connection = conexion.ObtenerConexion())
@@ -78,7 +78,7 @@ namespace CapaDatos
                     if (command.ExecuteNonQuery() > 0)
                     {
                         // Actualizar el estado de la habitación a "limpia"
-                        ActualizarEstadoHabitacion(idHabitacion, "limpia");
+                        ActualizarEstadoHabitacion(idHabitacion, estado);
                         result = true;
                     }
                     connection.Close();

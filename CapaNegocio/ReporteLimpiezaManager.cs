@@ -14,7 +14,7 @@ namespace CapaNegocio
         public bool InsertarReporteLimpieza(Limpieza limpieza)
         {        
 
-            bool resp = new LimpiezaHabitacionDAO().GuardarLimpieza(limpieza.IdHabitacion, limpieza.FechaLimpieza, limpieza.Observaciones, limpieza.IdInventario, limpieza.IdUsuario);
+            bool resp = new LimpiezaHabitacionDAO().GuardarLimpieza(limpieza.IdHabitacion, limpieza.FechaLimpieza, limpieza.Observaciones, limpieza.IdInventario, limpieza.IdUsuario, limpieza.Estado);
 
             return resp;
         }

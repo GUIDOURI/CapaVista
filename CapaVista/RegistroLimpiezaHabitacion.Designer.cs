@@ -33,6 +33,12 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             label1 = new Label();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             label3 = new Label();
@@ -130,7 +136,7 @@
             dataGridView1.BackgroundColor = Color.FromArgb(64, 64, 64);
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ColumnNumHabitacion, ColumnFecha, ColumnEstado, ColumnInventario, ColumnEmpleado, ColumnObservaciones });
-            dataGridView1.GridColor = Color.Silver;
+            dataGridView1.GridColor = Color.GreenYellow;
             dataGridView1.Location = new Point(271, 127);
             dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
@@ -224,6 +230,8 @@
             // ColumnNumHabitacion
             // 
             ColumnNumHabitacion.DataPropertyName = "numhabitacion";
+            dataGridViewCellStyle1.BackColor = Color.Gray;
+            ColumnNumHabitacion.DefaultCellStyle = dataGridViewCellStyle1;
             ColumnNumHabitacion.HeaderText = "NUMERO";
             ColumnNumHabitacion.MinimumWidth = 6;
             ColumnNumHabitacion.Name = "ColumnNumHabitacion";
@@ -232,6 +240,8 @@
             // ColumnFecha
             // 
             ColumnFecha.DataPropertyName = "FechaLimpieza";
+            dataGridViewCellStyle2.BackColor = Color.Gray;
+            ColumnFecha.DefaultCellStyle = dataGridViewCellStyle2;
             ColumnFecha.HeaderText = "FECHA Y HORA";
             ColumnFecha.MinimumWidth = 6;
             ColumnFecha.Name = "ColumnFecha";
@@ -240,6 +250,8 @@
             // ColumnEstado
             // 
             ColumnEstado.DataPropertyName = "estado";
+            dataGridViewCellStyle3.BackColor = Color.Gray;
+            ColumnEstado.DefaultCellStyle = dataGridViewCellStyle3;
             ColumnEstado.HeaderText = "ESTADO";
             ColumnEstado.MinimumWidth = 6;
             ColumnEstado.Name = "ColumnEstado";
@@ -248,6 +260,8 @@
             // ColumnInventario
             // 
             ColumnInventario.DataPropertyName = "nombre_objeto";
+            dataGridViewCellStyle4.BackColor = Color.Gray;
+            ColumnInventario.DefaultCellStyle = dataGridViewCellStyle4;
             ColumnInventario.HeaderText = "INVENTARIO";
             ColumnInventario.MinimumWidth = 6;
             ColumnInventario.Name = "ColumnInventario";
@@ -256,6 +270,8 @@
             // ColumnEmpleado
             // 
             ColumnEmpleado.DataPropertyName = "empleado";
+            dataGridViewCellStyle5.BackColor = Color.Gray;
+            ColumnEmpleado.DefaultCellStyle = dataGridViewCellStyle5;
             ColumnEmpleado.HeaderText = "EMPLEADO";
             ColumnEmpleado.MinimumWidth = 6;
             ColumnEmpleado.Name = "ColumnEmpleado";
@@ -264,6 +280,8 @@
             // ColumnObservaciones
             // 
             ColumnObservaciones.DataPropertyName = "Observaciones";
+            dataGridViewCellStyle6.BackColor = Color.Gray;
+            ColumnObservaciones.DefaultCellStyle = dataGridViewCellStyle6;
             ColumnObservaciones.HeaderText = "OBSERVACIONES";
             ColumnObservaciones.MinimumWidth = 6;
             ColumnObservaciones.Name = "ColumnObservaciones";

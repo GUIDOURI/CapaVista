@@ -2,7 +2,7 @@
 {
     public class ComunesVista
     {
-        public static void CargarDatosComoBox<T>(ComboBox combo, IList<T> coleccion, string valor, string mostrar, string inicio) 
+        public static void CargarDatosComoBox<T>(ComboBox combo, IList<T> coleccion, string valor, string mostrar, string inicio)
         {
             //var bindinList = new BindingList(coleccion);
             combo.DataSource = coleccion;
