@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CapaDatos.Clases
+﻿namespace CapaDatos.Clases
 {
     internal class Empleados : Persona
     {
         private int idUsuario;
+
         public int IdUsuario
         {
             get { return idUsuario; }
@@ -16,6 +11,7 @@ namespace CapaDatos.Clases
         }
 
         private Byte foto;
+
         public Byte Foto
         {
             get { return foto; }
@@ -23,6 +19,7 @@ namespace CapaDatos.Clases
         }
 
         private string usuario;
+
         public string Usuarios
         {
             get { return usuario; }
@@ -30,6 +27,7 @@ namespace CapaDatos.Clases
         }
 
         private string contrasena;
+
         public string Contrasena
         {
             get { return contrasena; }

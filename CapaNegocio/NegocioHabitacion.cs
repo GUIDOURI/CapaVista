@@ -6,7 +6,8 @@ namespace CapaNegocio
 {
     public class NegocioHabitacion
     {
-        public IList<Habitacion> ListarHabitaciones() { 
+        public IList<Habitacion> ListarHabitaciones()
+        {
             IList<Habitacion> habitaciones = new List<Habitacion>();
 
             DataTable dt = new HabitacionDAO().ObtenerHabitaciones();

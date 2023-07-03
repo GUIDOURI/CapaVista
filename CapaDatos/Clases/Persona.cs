@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CapaDatos.Clases
+﻿namespace CapaDatos.Clases
 {
     internal class Persona
     {
         private string nombre;
+
         public string Nombre
         {
             get { return nombre; }
@@ -16,6 +11,7 @@ namespace CapaDatos.Clases
         }
 
         private string apellidos;
+
         public string Apellidos
         {
             get { return apellidos; }
@@ -23,13 +19,15 @@ namespace CapaDatos.Clases
         }
 
         private int celular;
+
         public int Celular
-        { 
+        {
             get { return celular; }
-            set { celular = value; } 
+            set { celular = value; }
         }
 
         private int ci;
+
         public int Ci
         {
             get { return ci; }
@@ -37,6 +35,7 @@ namespace CapaDatos.Clases
         }
 
         private string direccion;
+
         public string Direccion
         {
             get { return direccion; }

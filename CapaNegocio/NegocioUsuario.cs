@@ -1,7 +1,7 @@
-﻿using System.Text;
-using CapaDatos;
-using System.Security.Cryptography;
+﻿using CapaDatos;
 using MySql.Data.MySqlClient;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace CapaNegocio
 {

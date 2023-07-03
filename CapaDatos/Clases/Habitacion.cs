@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CapaDatos.Clases
+﻿namespace CapaDatos.Clases
 {
     internal class Habitacion
     {
         private int Idhabitacion;
+
         public int IDHabitacion
         {
             get { return Idhabitacion; }
@@ -16,18 +11,23 @@ namespace CapaDatos.Clases
         }
 
         private int piso;
+
         public int Piso
         {
             get { return piso; }
             set { piso = value; }
         }
+
         private string tipoHabitacion;
-        public  string TipoHabitacion
+
+        public string TipoHabitacion
         {
             get { return tipoHabitacion; }
             set { tipoHabitacion = value; }
         }
+
         private string NumHabitacion;
+
         public string NUMHabitacion
         {
             get { return NumHabitacion; }
@@ -35,6 +35,7 @@ namespace CapaDatos.Clases
         }
 
         private string descripcion;
+
         public string Descripcion
         {
             get { return descripcion; }
@@ -42,6 +43,7 @@ namespace CapaDatos.Clases
         }
 
         private string estado;
+
         public string Estado
         {
             get { return estado; }
@@ -49,6 +51,7 @@ namespace CapaDatos.Clases
         }
 
         private int precio;
+
         public int Precio
         {
             get { return precio; }

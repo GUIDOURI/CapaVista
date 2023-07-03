@@ -15,6 +15,7 @@ namespace CapaNegocio
             }
             return data;
         }
+
         private static T GetItem<T>(DataRow dr)
         {
             Type temp = typeof(T);

@@ -3,7 +3,7 @@ using System.Data;
 
 namespace CapaDatos
 {
-    public class UbicacionDAO: BaseDAO
+    public class UbicacionDAO : BaseDAO
     {
         public DataTable ObtenerUbicaciones()
         {

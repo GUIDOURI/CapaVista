@@ -3,7 +3,7 @@ using System.Data;
 
 namespace CapaDatos
 {
-    public class LimpiezaAreaDAO: BaseDAO
+    public class LimpiezaAreaDAO : BaseDAO
     {
         public bool GuardarLimpiezaArea(int idUbicacion, int idInventario, int idUsuario, string observacion, DateTime fechaLimpieza)
         {
@@ -27,7 +27,7 @@ namespace CapaDatos
                     command.Parameters.AddWithValue("@observacion", observacion);
                     command.Parameters.AddWithValue("@fechaLimpieza", fechaLimpieza);
                     if (command.ExecuteNonQuery() > 0)
-                    {                        
+                    {
                         result = true;
                     }
                     connection.Close();
@@ -36,7 +36,6 @@ namespace CapaDatos
                 {
                     throw new Exception("Error al registrar reporte de limpieza de area: " + ex.Message);
                 }
-
             }
             return result;
         }

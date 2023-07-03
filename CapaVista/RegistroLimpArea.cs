@@ -10,6 +10,7 @@ namespace CapaVista
         {
             InitializeComponent();
         }
+
         private void Form_Load(object sender, EventArgs e)
         {
             LoadDataGredview();
@@ -43,7 +44,6 @@ namespace CapaVista
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
 
         private void guna2Button5_Click(object sender, EventArgs e)
@@ -75,19 +75,16 @@ namespace CapaVista
             AbrirFormPanel(new FrmMenu());
         }
 
-
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             RegistroLimpiezaHabitacion registroLimpiezaHabitacion = new RegistroLimpiezaHabitacion();
             registroLimpiezaHabitacion.FormClosed -= new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
             AbrirFormPanel(registroLimpiezaHabitacion);
             //Al mostrar el registro se quedan los botones anteriores
-
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-
         }
 
         private void BtnRegLimpiezaArea_Click(object sender, EventArgs e)

@@ -6,11 +6,13 @@ namespace CapaVista
     public partial class RegistroLimpiezaHabitacion : Form
     {
         private IList<Habitacion> habitacions;
+
         public RegistroLimpiezaHabitacion()
         {
             InitializeComponent();
             habitacions = new NegocioHabitacion().ListarHabitaciones();
         }
+
         private void RegistroLimpiezaHabitacion_Load(object sender, EventArgs e)
         {
             LoadDataGredview();
@@ -35,6 +37,7 @@ namespace CapaVista
         {
             ComunesVista.CargarDatosComoBox<Habitacion>(comboBoxNumHabitacion, habitacions, "Id", "Nro", "--Seleccione habitacion--");
         }
+
         private void LimpiarCampos()
         {
             comboBoxEmpleado.ResetText();
@@ -43,7 +46,6 @@ namespace CapaVista
             txtEstado.ResetText();
             txtObservaciones.ResetText();
         }
-
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
@@ -108,7 +110,7 @@ namespace CapaVista
                     MessageBox.Show(ex.Message);
                 }
             }
-            catch(Exception) { }            
+            catch (Exception) { }
         }
 
         private void LoadDataGredview()

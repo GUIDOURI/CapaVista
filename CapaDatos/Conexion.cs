@@ -1,6 +1,6 @@
-﻿using System.Data;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using System.Configuration;
+using System.Data;
 
 namespace CapaDatos
 {
@@ -9,7 +9,6 @@ namespace CapaDatos
         private string CadenaConexion;
         private MySqlConnection conexion;
 
-       
         public Conexion()
         {
             // Cadena de conexión a la base de datos
@@ -44,6 +43,7 @@ namespace CapaDatos
                 conexion.Close();
             }
         }
+
         public void Dispose()
         {
             if (conexion != null)
@@ -71,6 +71,5 @@ namespace CapaDatos
                 CerrarConexion();
             }
         }
-
     }
 }

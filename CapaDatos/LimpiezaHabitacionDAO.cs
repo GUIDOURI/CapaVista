@@ -4,8 +4,7 @@ using System.Data;
 namespace CapaDatos
 {
     public class LimpiezaHabitacionDAO : BaseDAO
-    {      
-
+    {
         public void RegistrarLimpiezaHabitacion(DateTime fecha, int idHabitacion)
         {
             using (MySqlConnection connection = conexion.ObtenerConexion())
@@ -57,7 +56,8 @@ namespace CapaDatos
             bool result = false;
             using (MySqlConnection connection = conexion.ObtenerConexion())
             {
-                try {
+                try
+                {
                     connection.Open();
 
                     // Obtener el último ID de limpieza
@@ -82,10 +82,11 @@ namespace CapaDatos
                         result = true;
                     }
                     connection.Close();
-                } catch(Exception ex) {
+                }
+                catch (Exception ex)
+                {
                     throw new Exception("Error al registrar reporte de limpieza: " + ex.Message);
                 }
-                
             }
             return result;
         }
@@ -100,7 +101,7 @@ namespace CapaDatos
                 connection.Open();
 
                 string query = @$"SELECT h.numhabitacion, rl.FechaLimpieza, h.estado, inv.nombre_objeto, CONCAT(usr.nombre, ' ', usr.apellidos) empleado, rl.Observaciones
-                                from reporte_limpieza rl 
+                                from reporte_limpieza rl
                                 INNER JOIN habitacion h on rl.id_habitacion = h.id_habitacion
                                 INNER JOIN inventario inv on rl.id_inventario = inv.id_inventario
                                 INNER JOIN usuario usr on rl.id_usuario = usr.id_usuario";

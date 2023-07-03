@@ -1,10 +1,10 @@
-﻿using System.Data;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace CapaDatos
 {
     public class InventarioDAO : BaseDAO
-    {        
+    {
         public DataTable ObtenerInventario()
         {
             MySqlConnection connection = conexion.ObtenerConexion();
