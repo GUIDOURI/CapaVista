@@ -185,15 +185,20 @@ namespace Hotel
         //abrir los formularios en el principal
         private void AbrirFormPanel(object formHijo)
         {
-            if (this.panelContenedor.Controls.Count > 0)
-                this.panelContenedor.Controls.RemoveAt(0);
-            Form fh = formHijo as Form;
-            fh.TopLevel = false;
-            fh.FormBorderStyle = FormBorderStyle.None;
-            fh.Dock = DockStyle.Fill;
-            this.panelContenedor.Controls.Add(fh);
-            this.panelContenedor.Tag = fh;
-            fh.Show();
+            try
+            {
+                if (this.panelContenedor.Controls.Count > 0)
+                    this.panelContenedor.Controls.RemoveAt(0);
+                Form fh = formHijo as Form;
+                fh.TopLevel = false;
+                fh.FormBorderStyle = FormBorderStyle.None;
+                fh.Dock = DockStyle.Fill;
+                this.panelContenedor.Controls.Add(fh);
+                this.panelContenedor.Tag = fh;
+                fh.Show();
+            }
+            catch { }
+            
         }
 
         private void Btnpricipal_Click(object sender, EventArgs e)

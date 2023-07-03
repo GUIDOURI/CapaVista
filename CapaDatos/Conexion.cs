@@ -12,10 +12,10 @@ namespace CapaDatos
         public Conexion()
         {
             // Cadena de conexión a la base de datos
-            string servidor = "localhost";
-            string baseDatos = "hotel_amallaves";
-            string usuario = "root";
-            string contrasena = "";
+            //string servidor = "localhost";
+            //string baseDatos = "hotel_amallaves";
+            //string usuario = "root";
+            //string contrasena = "";
             //CadenaConexion = $"server={servidor};database={baseDatos};uid={usuario};pwd={contrasena};";
             CadenaConexion = ConfigurationManager.ConnectionStrings["mysql"].ConnectionString;
 
