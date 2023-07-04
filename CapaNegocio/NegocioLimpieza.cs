@@ -17,11 +17,8 @@ namespace CapaNegocio
             return resp;
         }
 
-     //   public DataTable ListaReporteLimpieza()
-       // {
-         //   return new LimpiezaHabitacionDAO().ListaReportesLimpieza();
-        //}
-        public IList<Limpieza> ListaReporteLimpieza()
+    
+        public DataTable ListaReporteLimpieza()
         {
             IList<Limpieza> empleados = new List<Limpieza>();
 
@@ -29,7 +26,7 @@ namespace CapaNegocio
 
             empleados = Comunes.ConvertDataTable<Limpieza>(dt);
 
-            return empleados;
+            return dt;
         }
 
         public IList<Limpieza> ListarTablaLimpieza()

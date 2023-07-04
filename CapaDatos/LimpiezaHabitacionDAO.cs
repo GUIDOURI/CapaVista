@@ -18,7 +18,7 @@ namespace CapaDatos
                 int nuevoID = ultimoID + 1;
 
                 // Insertar el nuevo registro de limpieza
-                string query = "INSERT INTO reporte_limpiezas(ID_limpieza, Fecha, id_habitacion) VALUES (@idLimpieza, @fecha, @idHabitacion)";
+                string query = "INSERT INTO reporte_limpieza(ID_limpieza, Fecha, id_habitacion) VALUES (@idLimpieza, @fecha, @idHabitacion)";
                 MySqlCommand command = new MySqlCommand(query, connection);
                 command.Parameters.AddWithValue("@idLimpieza", nuevoID);
                 command.Parameters.AddWithValue("@fecha", fecha);
@@ -90,7 +90,7 @@ namespace CapaDatos
             }
             return result;
         }
-        //holi gg
+       
         public DataTable ListaReportesLimpieza()
         {
             MySqlConnection connection = conexion.ObtenerConexion();
