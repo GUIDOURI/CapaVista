@@ -18,7 +18,7 @@ namespace CapaDatos
                 int nuevoID = ultimoID + 1;
 
                 // Insertar el nuevo registro de limpieza
-                string query = "INSERT INTO registro_limpieza_habitacion (ID_limpieza, Fecha, id_habitacion) VALUES (@idLimpieza, @fecha, @idHabitacion)";
+                string query = "INSERT INTO reporte_limpiezas(ID_limpieza, Fecha, id_habitacion) VALUES (@idLimpieza, @fecha, @idHabitacion)";
                 MySqlCommand command = new MySqlCommand(query, connection);
                 command.Parameters.AddWithValue("@idLimpieza", nuevoID);
                 command.Parameters.AddWithValue("@fecha", fecha);
@@ -105,6 +105,32 @@ namespace CapaDatos
                                 INNER JOIN habitacion h on rl.id_habitacion = h.id_habitacion
                                 INNER JOIN inventario inv on rl.id_inventario = inv.id_inventario
                                 INNER JOIN usuario usr on rl.id_usuario = usr.id_usuario";
+                MySqlCommand command = new MySqlCommand(query, connection);
+                MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                adapter.Fill(dtHabitaciones);
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error al obtener las habitaciones: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return dtHabitaciones;
+        }
+
+        public DataTable ListarTablaLimpieza()
+        {
+            MySqlConnection connection = conexion.ObtenerConexion();
+            DataTable dtHabitaciones = new DataTable();
+
+            try
+            {
+                connection.Open();
+
+                string query = @$"SELECT id_reporte Id, Observaciones FROM reporte_limpieza ";
                 MySqlCommand command = new MySqlCommand(query, connection);
                 MySqlDataAdapter adapter = new MySqlDataAdapter(command);
                 adapter.Fill(dtHabitaciones);

@@ -89,7 +89,7 @@ namespace CapaVista
                     Estado = estado
                 };
 
-                ReporteLimpiezaManager reporteLimpiezaManager = new ReporteLimpiezaManager();
+                NegocioLimpieza reporteLimpiezaManager = new NegocioLimpieza();
 
                 try
                 {
@@ -99,6 +99,7 @@ namespace CapaVista
                         LoadDataGredview();
                         LimpiarCampos();
                         MessageBox.Show("Registro de limpieza realizado correctamente.");
+                       // throw new Exception("Error de prueba");
                     }
                     else
                     {
@@ -107,7 +108,8 @@ namespace CapaVista
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+
+                    MessageBox.Show("Ha ocurrido un error\n" + ex.Message);
                 }
             }
             catch (Exception) { }
@@ -115,7 +117,7 @@ namespace CapaVista
 
         private void LoadDataGredview()
         {
-            ReporteLimpiezaManager reporteLimpiezaManager = new ReporteLimpiezaManager();
+            NegocioLimpieza reporteLimpiezaManager = new NegocioLimpieza();
             dataGridView1.DataSource = reporteLimpiezaManager.ListaReporteLimpieza();
         }
     }

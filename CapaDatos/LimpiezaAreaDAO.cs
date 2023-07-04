@@ -77,5 +77,31 @@ INNER JOIN usuario usr on la.id_usuario = usr.id_usuario";
 
             return dtHabitaciones;
         }
+
+        public DataTable ListarTablaLimpieza()
+        {
+            MySqlConnection connection = conexion.ObtenerConexion();
+            DataTable dtHabitaciones = new DataTable();
+
+            try
+            {
+                connection.Open();
+
+                string query = @$"SELECT id_limpieza_area Id, ObservacionesArea Observacion FROM limpieza_areas ";
+                MySqlCommand command = new MySqlCommand(query, connection);
+                MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                adapter.Fill(dtHabitaciones);
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error al obtener las habitaciones: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return dtHabitaciones;
+        }
     }
 }

@@ -79,26 +79,24 @@
             panelContenedor.Controls.Add(label1);
             panelContenedor.Dock = DockStyle.Fill;
             panelContenedor.Location = new Point(0, 0);
-            panelContenedor.Margin = new Padding(3, 4, 3, 4);
             panelContenedor.Name = "panelContenedor";
-            panelContenedor.Size = new Size(1103, 685);
+            panelContenedor.Size = new Size(965, 514);
             panelContenedor.TabIndex = 4;
+            panelContenedor.Paint += panelContenedor_Paint;
             // 
             // CbxUbicacion
             // 
             CbxUbicacion.FormattingEnabled = true;
-            CbxUbicacion.Location = new Point(2, 284);
-            CbxUbicacion.Margin = new Padding(3, 4, 3, 4);
+            CbxUbicacion.Location = new Point(2, 213);
             CbxUbicacion.Name = "CbxUbicacion";
-            CbxUbicacion.Size = new Size(222, 28);
+            CbxUbicacion.Size = new Size(195, 23);
             CbxUbicacion.TabIndex = 37;
             // 
             // txtObservaciones
             // 
-            txtObservaciones.Location = new Point(0, 488);
-            txtObservaciones.Margin = new Padding(3, 4, 3, 4);
+            txtObservaciones.Location = new Point(0, 366);
             txtObservaciones.Name = "txtObservaciones";
-            txtObservaciones.Size = new Size(221, 27);
+            txtObservaciones.Size = new Size(194, 23);
             txtObservaciones.TabIndex = 36;
             // 
             // label6
@@ -107,19 +105,18 @@
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Microsoft Sans Serif", 9.749998F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = Color.FromArgb(190, 158, 68);
-            label6.Location = new Point(3, 459);
+            label6.Location = new Point(3, 344);
             label6.Name = "label6";
-            label6.Size = new Size(134, 20);
+            label6.Size = new Size(112, 16);
             label6.TabIndex = 35;
             label6.Text = "Observaciones";
             // 
             // comboBoxEmpleado
             // 
             comboBoxEmpleado.FormattingEnabled = true;
-            comboBoxEmpleado.Location = new Point(0, 424);
-            comboBoxEmpleado.Margin = new Padding(3, 4, 3, 4);
+            comboBoxEmpleado.Location = new Point(0, 318);
             comboBoxEmpleado.Name = "comboBoxEmpleado";
-            comboBoxEmpleado.Size = new Size(221, 28);
+            comboBoxEmpleado.Size = new Size(194, 23);
             comboBoxEmpleado.TabIndex = 34;
             // 
             // label4
@@ -128,19 +125,18 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Microsoft Sans Serif", 9.749998F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(190, 158, 68);
-            label4.Location = new Point(6, 395);
+            label4.Location = new Point(5, 296);
             label4.Name = "label4";
-            label4.Size = new Size(91, 20);
+            label4.Size = new Size(78, 16);
             label4.TabIndex = 33;
             label4.Text = "Empleado";
             // 
             // comboBoxInventario
             // 
             comboBoxInventario.FormattingEnabled = true;
-            comboBoxInventario.Location = new Point(3, 348);
-            comboBoxInventario.Margin = new Padding(3, 4, 3, 4);
+            comboBoxInventario.Location = new Point(3, 261);
             comboBoxInventario.Name = "comboBoxInventario";
-            comboBoxInventario.Size = new Size(222, 28);
+            comboBoxInventario.Size = new Size(195, 23);
             comboBoxInventario.TabIndex = 32;
             // 
             // label2
@@ -149,9 +145,9 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Microsoft Sans Serif", 9.749998F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(190, 158, 68);
-            label2.Location = new Point(3, 319);
+            label2.Location = new Point(3, 239);
             label2.Name = "label2";
-            label2.Size = new Size(91, 20);
+            label2.Size = new Size(75, 16);
             label2.TabIndex = 31;
             label2.Text = "Inventario";
             // 
@@ -161,12 +157,11 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ColumnIdArea, ColumnUbicacion, ColumnInventario, ColumnEmpleado, ColumnObservaciones, ColumnFecha });
             dataGridView1.GridColor = Color.Silver;
-            dataGridView1.Location = new Point(245, 112);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
+            dataGridView1.Location = new Point(214, 84);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(847, 505);
+            dataGridView1.Size = new Size(741, 379);
             dataGridView1.TabIndex = 30;
             // 
             // ColumnIdArea
@@ -234,11 +229,10 @@
             guna2Panel1.BackgroundImage = (Image)resources.GetObject("guna2Panel1.BackgroundImage");
             guna2Panel1.BackgroundImageLayout = ImageLayout.Stretch;
             guna2Panel1.CustomizableEdges = customizableEdges1;
-            guna2Panel1.Location = new Point(14, 16);
-            guna2Panel1.Margin = new Padding(3, 4, 3, 4);
+            guna2Panel1.Location = new Point(12, 12);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Panel1.Size = new Size(163, 161);
+            guna2Panel1.Size = new Size(143, 121);
             guna2Panel1.TabIndex = 29;
             // 
             // label5
@@ -247,9 +241,9 @@
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Microsoft Sans Serif", 9.749998F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.FromArgb(190, 158, 68);
-            label5.Location = new Point(3, 241);
+            label5.Location = new Point(3, 181);
             label5.Name = "label5";
-            label5.Size = new Size(92, 20);
+            label5.Size = new Size(77, 16);
             label5.TabIndex = 28;
             label5.Text = "Ubicacion";
             // 
@@ -265,11 +259,10 @@
             BtnRegLimpiezaArea.FillColor = Color.Transparent;
             BtnRegLimpiezaArea.Font = new Font("Microsoft Sans Serif", 11.2499981F, FontStyle.Bold, GraphicsUnit.Point);
             BtnRegLimpiezaArea.ForeColor = Color.FromArgb(190, 158, 68);
-            BtnRegLimpiezaArea.Location = new Point(30, 564);
-            BtnRegLimpiezaArea.Margin = new Padding(3, 4, 3, 4);
+            BtnRegLimpiezaArea.Location = new Point(26, 423);
             BtnRegLimpiezaArea.Name = "BtnRegLimpiezaArea";
             BtnRegLimpiezaArea.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            BtnRegLimpiezaArea.Size = new Size(173, 53);
+            BtnRegLimpiezaArea.Size = new Size(151, 40);
             BtnRegLimpiezaArea.TabIndex = 25;
             BtnRegLimpiezaArea.Text = "REGISTRAR";
             BtnRegLimpiezaArea.Click += BtnRegLimpiezaArea_Click;
@@ -282,20 +275,19 @@
             label1.Font = new Font("Microsoft Sans Serif", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(190, 158, 68);
             label1.ImageAlign = ContentAlignment.TopLeft;
-            label1.Location = new Point(424, 36);
+            label1.Location = new Point(371, 27);
             label1.Name = "label1";
-            label1.Size = new Size(481, 36);
+            label1.Size = new Size(383, 29);
             label1.TabIndex = 24;
             label1.Text = "REGISTRO DE LIMPIEZA AREA";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // RegistroLimpArea
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1103, 685);
+            ClientSize = new Size(965, 514);
             Controls.Add(panelContenedor);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "RegistroLimpArea";
             Text = "FormLimpieza";
             Load += Form_Load;

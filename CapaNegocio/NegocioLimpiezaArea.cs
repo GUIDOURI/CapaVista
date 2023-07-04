@@ -17,5 +17,15 @@ namespace CapaNegocio
         {
             return new LimpiezaAreaDAO().ListaLimpiezaAreas();
         }
+        public IList<LimpiezaArea> ListarTablaLimpieza()
+        {
+            IList<LimpiezaArea> empleados = new List<LimpiezaArea>();
+
+            DataTable dt = new LimpiezaAreaDAO().ListarTablaLimpieza();
+
+            empleados = Comunes.ConvertDataTable<LimpiezaArea>(dt);
+
+            return empleados;
+        }
     }
 }
