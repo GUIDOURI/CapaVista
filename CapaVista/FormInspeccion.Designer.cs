@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInspeccion));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             label1 = new Label();
             panel1 = new Panel();
             comboBoxIDarea = new ComboBox();
@@ -39,13 +41,13 @@
             dataGridView1 = new DataGridView();
             comboBoxNumHabitacion = new ComboBox();
             label3 = new Label();
-            ColumnNumHabitacion = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
-            ColumnObvHabitacion = new DataGridViewTextBoxColumn();
-            ColumnIDarea = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            ColumnObvArea = new DataGridViewTextBoxColumn();
             ColumnFecha = new DataGridViewTextBoxColumn();
+            ColumnObvArea = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            ColumnIDarea = new DataGridViewTextBoxColumn();
+            ColumnObvHabitacion = new DataGridViewTextBoxColumn();
+            Column1 = new DataGridViewTextBoxColumn();
+            ColumnNumHabitacion = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -109,14 +111,34 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllHeaders;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(227, 167, 30);
+            dataGridViewCellStyle1.Font = new Font("Gill Sans MT", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = Color.Black;
+            dataGridViewCellStyle1.SelectionForeColor = Color.White;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ColumnNumHabitacion, Column1, ColumnObvHabitacion, ColumnIDarea, Column2, ColumnObvArea, ColumnFecha });
+            dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.Location = new Point(289, 68);
             dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(229, 217, 182);
+            dataGridViewCellStyle2.Font = new Font("Gill Sans MT", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(13, 13, 13);
+            dataGridViewCellStyle2.SelectionForeColor = Color.White;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(868, 289);
+            dataGridView1.Size = new Size(983, 289);
             dataGridView1.TabIndex = 7;
             // 
             // comboBoxNumHabitacion
@@ -126,6 +148,7 @@
             comboBoxNumHabitacion.Name = "comboBoxNumHabitacion";
             comboBoxNumHabitacion.Size = new Size(242, 23);
             comboBoxNumHabitacion.TabIndex = 12;
+            comboBoxNumHabitacion.SelectedIndexChanged += comboBoxNumHabitacion_SelectedIndexChanged;
             // 
             // label3
             // 
@@ -138,64 +161,59 @@
             label3.TabIndex = 13;
             label3.Text = "AREAS";
             // 
-            // ColumnNumHabitacion
-            // 
-            ColumnNumHabitacion.DataPropertyName = "numhabitacion";
-            ColumnNumHabitacion.HeaderText = "Numero Habitacion";
-            ColumnNumHabitacion.MinimumWidth = 6;
-            ColumnNumHabitacion.Name = "ColumnNumHabitacion";
-            ColumnNumHabitacion.Width = 125;
-            // 
-            // Column1
-            // 
-            Column1.DataPropertyName = "id_inventario";
-            Column1.HeaderText = "InventarioHabitacion";
-            Column1.Name = "Column1";
-            // 
-            // ColumnObvHabitacion
-            // 
-            ColumnObvHabitacion.DataPropertyName = "Observaciones";
-            ColumnObvHabitacion.HeaderText = "ObservacionHabitacion";
-            ColumnObvHabitacion.MinimumWidth = 6;
-            ColumnObvHabitacion.Name = "ColumnObvHabitacion";
-            ColumnObvHabitacion.Width = 125;
-            // 
-            // ColumnIDarea
-            // 
-            ColumnIDarea.DataPropertyName = "id_limpieza_area";
-            ColumnIDarea.HeaderText = "ID Area";
-            ColumnIDarea.MinimumWidth = 6;
-            ColumnIDarea.Name = "ColumnIDarea";
-            ColumnIDarea.Width = 125;
-            // 
-            // Column2
-            // 
-            Column2.DataPropertyName = "id_inventario";
-            Column2.HeaderText = "InventarioArea";
-            Column2.Name = "Column2";
-            // 
-            // ColumnObvArea
-            // 
-            ColumnObvArea.DataPropertyName = "ObservacionesArea";
-            ColumnObvArea.HeaderText = "ObservacionArea";
-            ColumnObvArea.MinimumWidth = 6;
-            ColumnObvArea.Name = "ColumnObvArea";
-            ColumnObvArea.Width = 125;
-            // 
             // ColumnFecha
             // 
             ColumnFecha.DataPropertyName = "FechaInspeccion";
             ColumnFecha.HeaderText = "FECHA INSPECCION";
             ColumnFecha.MinimumWidth = 6;
             ColumnFecha.Name = "ColumnFecha";
-            ColumnFecha.Width = 125;
+            // 
+            // ColumnObvArea
+            // 
+            ColumnObvArea.DataPropertyName = "ObservacionesArea";
+            ColumnObvArea.HeaderText = "OBSERVACION AREA";
+            ColumnObvArea.MinimumWidth = 6;
+            ColumnObvArea.Name = "ColumnObvArea";
+            // 
+            // Column2
+            // 
+            Column2.DataPropertyName = "id_inventario";
+            Column2.HeaderText = "INVENTARIO AREA";
+            Column2.Name = "Column2";
+            // 
+            // ColumnIDarea
+            // 
+            ColumnIDarea.DataPropertyName = "id_limpieza_area";
+            ColumnIDarea.HeaderText = "ID AREA";
+            ColumnIDarea.MinimumWidth = 6;
+            ColumnIDarea.Name = "ColumnIDarea";
+            // 
+            // ColumnObvHabitacion
+            // 
+            ColumnObvHabitacion.DataPropertyName = "Observaciones";
+            ColumnObvHabitacion.HeaderText = "OBSERVACIONES HAB.";
+            ColumnObvHabitacion.MinimumWidth = 6;
+            ColumnObvHabitacion.Name = "ColumnObvHabitacion";
+            // 
+            // Column1
+            // 
+            Column1.DataPropertyName = "id_inventario";
+            Column1.HeaderText = "INVENTARIO HAB.";
+            Column1.Name = "Column1";
+            // 
+            // ColumnNumHabitacion
+            // 
+            ColumnNumHabitacion.DataPropertyName = "numhabitacion";
+            ColumnNumHabitacion.HeaderText = "NUM. HAB.";
+            ColumnNumHabitacion.MinimumWidth = 6;
+            ColumnNumHabitacion.Name = "ColumnNumHabitacion";
             // 
             // FormInspeccion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(26, 26, 26);
-            ClientSize = new Size(1169, 437);
+            ClientSize = new Size(1316, 437);
             Controls.Add(label3);
             Controls.Add(comboBoxNumHabitacion);
             Controls.Add(dataGridView1);

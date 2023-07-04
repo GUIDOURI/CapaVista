@@ -92,5 +92,10 @@ namespace CapaVista
             IList<LimpiezaArea> ubicaciones = new NegocioLimpiezaArea().ListarTablaLimpieza();
             ComunesVista.CargarDatosComoBox<LimpiezaArea>(comboBoxIDarea, ubicaciones, "Id", "Observacion", "--Seleccione ubicación--");
         }
+
+        private void comboBoxNumHabitacion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

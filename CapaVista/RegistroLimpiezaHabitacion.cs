@@ -99,7 +99,7 @@ namespace CapaVista
                         LoadDataGredview();
                         LimpiarCampos();
                         MessageBox.Show("Registro de limpieza realizado correctamente.");
-                       // throw new Exception("Error de prueba");
+                        // throw new Exception("Error de prueba");
                     }
                     else
                     {
@@ -119,6 +119,11 @@ namespace CapaVista
         {
             NegocioLimpieza reporteLimpiezaManager = new NegocioLimpieza();
             dataGridView1.DataSource = reporteLimpiezaManager.ListaReporteLimpieza();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
