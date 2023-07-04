@@ -39,15 +39,15 @@
             label2 = new Label();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             dataGridView1 = new DataGridView();
+            ColumnNumHabitacion = new DataGridViewTextBoxColumn();
+            Column1 = new DataGridViewTextBoxColumn();
+            ColumnObvHabitacion = new DataGridViewTextBoxColumn();
+            ColumnIDarea = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            ColumnObvArea = new DataGridViewTextBoxColumn();
+            ColumnFecha = new DataGridViewTextBoxColumn();
             comboBoxNumHabitacion = new ComboBox();
             label3 = new Label();
-            ColumnFecha = new DataGridViewTextBoxColumn();
-            ColumnObvArea = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            ColumnIDarea = new DataGridViewTextBoxColumn();
-            ColumnObvHabitacion = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
-            ColumnNumHabitacion = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -100,7 +100,7 @@
             guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(363, 376);
+            guna2Button1.Location = new Point(52, 314);
             guna2Button1.Margin = new Padding(3, 2, 3, 2);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -141,6 +141,53 @@
             dataGridView1.Size = new Size(983, 289);
             dataGridView1.TabIndex = 7;
             // 
+            // ColumnNumHabitacion
+            // 
+            ColumnNumHabitacion.DataPropertyName = "numhabitacion";
+            ColumnNumHabitacion.HeaderText = "NUM. HAB.";
+            ColumnNumHabitacion.MinimumWidth = 6;
+            ColumnNumHabitacion.Name = "ColumnNumHabitacion";
+            // 
+            // Column1
+            // 
+            Column1.DataPropertyName = "id_inventario";
+            Column1.HeaderText = "INVENTARIO HAB.";
+            Column1.Name = "Column1";
+            // 
+            // ColumnObvHabitacion
+            // 
+            ColumnObvHabitacion.DataPropertyName = "Observaciones";
+            ColumnObvHabitacion.HeaderText = "OBSERVACIONES HAB.";
+            ColumnObvHabitacion.MinimumWidth = 6;
+            ColumnObvHabitacion.Name = "ColumnObvHabitacion";
+            // 
+            // ColumnIDarea
+            // 
+            ColumnIDarea.DataPropertyName = "id_limpieza_area";
+            ColumnIDarea.HeaderText = "ID AREA";
+            ColumnIDarea.MinimumWidth = 6;
+            ColumnIDarea.Name = "ColumnIDarea";
+            // 
+            // Column2
+            // 
+            Column2.DataPropertyName = "id_inventario";
+            Column2.HeaderText = "INVENTARIO AREA";
+            Column2.Name = "Column2";
+            // 
+            // ColumnObvArea
+            // 
+            ColumnObvArea.DataPropertyName = "ObservacionesArea";
+            ColumnObvArea.HeaderText = "OBSERVACION AREA";
+            ColumnObvArea.MinimumWidth = 6;
+            ColumnObvArea.Name = "ColumnObvArea";
+            // 
+            // ColumnFecha
+            // 
+            ColumnFecha.DataPropertyName = "FechaInspeccion";
+            ColumnFecha.HeaderText = "FECHA INSPECCION";
+            ColumnFecha.MinimumWidth = 6;
+            ColumnFecha.Name = "ColumnFecha";
+            // 
             // comboBoxNumHabitacion
             // 
             comboBoxNumHabitacion.FormattingEnabled = true;
@@ -160,53 +207,6 @@
             label3.Size = new Size(42, 16);
             label3.TabIndex = 13;
             label3.Text = "AREAS";
-            // 
-            // ColumnFecha
-            // 
-            ColumnFecha.DataPropertyName = "FechaInspeccion";
-            ColumnFecha.HeaderText = "FECHA INSPECCION";
-            ColumnFecha.MinimumWidth = 6;
-            ColumnFecha.Name = "ColumnFecha";
-            // 
-            // ColumnObvArea
-            // 
-            ColumnObvArea.DataPropertyName = "ObservacionesArea";
-            ColumnObvArea.HeaderText = "OBSERVACION AREA";
-            ColumnObvArea.MinimumWidth = 6;
-            ColumnObvArea.Name = "ColumnObvArea";
-            // 
-            // Column2
-            // 
-            Column2.DataPropertyName = "id_inventario";
-            Column2.HeaderText = "INVENTARIO AREA";
-            Column2.Name = "Column2";
-            // 
-            // ColumnIDarea
-            // 
-            ColumnIDarea.DataPropertyName = "id_limpieza_area";
-            ColumnIDarea.HeaderText = "ID AREA";
-            ColumnIDarea.MinimumWidth = 6;
-            ColumnIDarea.Name = "ColumnIDarea";
-            // 
-            // ColumnObvHabitacion
-            // 
-            ColumnObvHabitacion.DataPropertyName = "Observaciones";
-            ColumnObvHabitacion.HeaderText = "OBSERVACIONES HAB.";
-            ColumnObvHabitacion.MinimumWidth = 6;
-            ColumnObvHabitacion.Name = "ColumnObvHabitacion";
-            // 
-            // Column1
-            // 
-            Column1.DataPropertyName = "id_inventario";
-            Column1.HeaderText = "INVENTARIO HAB.";
-            Column1.Name = "Column1";
-            // 
-            // ColumnNumHabitacion
-            // 
-            ColumnNumHabitacion.DataPropertyName = "numhabitacion";
-            ColumnNumHabitacion.HeaderText = "NUM. HAB.";
-            ColumnNumHabitacion.MinimumWidth = 6;
-            ColumnNumHabitacion.Name = "ColumnNumHabitacion";
             // 
             // FormInspeccion
             // 
