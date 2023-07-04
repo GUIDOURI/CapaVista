@@ -58,10 +58,10 @@ namespace CapaDatos
                 connection.Open();
 
                 string query = @$"select la.id_limpieza_area Id, ub.nombre_lugar Ubicacion, inv.nombre_objeto Inventario, CONCAT(usr.nombre, ' ', usr.apellidos) Empleado, la.ObservacionesArea, la.FechaLimpiezaArea
-from limpieza_areas la
-inner JOIN ubicacion ub on la.id_ubicacion = ub.id_ubicacion
-inner JOIN inventario inv on la.id_inventario = inv.id_inventario
-INNER JOIN usuario usr on la.id_usuario = usr.id_usuario";
+                from limpieza_areas la
+                inner JOIN ubicacion ub on la.id_ubicacion = ub.id_ubicacion
+                inner JOIN inventario inv on la.id_inventario = inv.id_inventario
+                INNER JOIN usuario usr on la.id_usuario = usr.id_usuario";
                 MySqlCommand command = new MySqlCommand(query, connection);
                 MySqlDataAdapter adapter = new MySqlDataAdapter(command);
                 adapter.Fill(dtHabitaciones);
