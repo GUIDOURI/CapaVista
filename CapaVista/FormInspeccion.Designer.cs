@@ -33,6 +33,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             label1 = new Label();
             panel1 = new Panel();
             comboBoxIDarea = new ComboBox();
@@ -79,17 +80,19 @@
             comboBoxIDarea.Name = "comboBoxIDarea";
             comboBoxIDarea.Size = new Size(242, 23);
             comboBoxIDarea.TabIndex = 3;
+            comboBoxIDarea.SelectedIndexChanged += comboBoxIDarea_SelectedIndexChanged;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Arial Narrow", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Font = new Font("Microsoft Sans Serif", 9.749998F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(190, 158, 68);
-            label2.Location = new Point(36, 141);
+            label2.Location = new Point(23, 149);
             label2.Name = "label2";
-            label2.Size = new Size(85, 16);
+            label2.Size = new Size(230, 16);
             label2.TabIndex = 4;
-            label2.Text = "HABITACIONES";
+            label2.Text = "OBSERVACION HABITACIONES";
+            label2.Click += label2_Click;
             // 
             // guna2Button1
             // 
@@ -98,13 +101,14 @@
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(52, 314);
+            guna2Button1.FillColor = Color.Transparent;
+            guna2Button1.Font = new Font("Microsoft Sans Serif", 11.2499981F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2Button1.ForeColor = Color.FromArgb(190, 158, 68);
+            guna2Button1.Location = new Point(40, 305);
             guna2Button1.Margin = new Padding(3, 2, 3, 2);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(181, 28);
+            guna2Button1.Size = new Size(213, 28);
             guna2Button1.TabIndex = 6;
             guna2Button1.Text = "CARGAR INSPECCION";
             guna2Button1.Click += guna2Button1_Click;
@@ -124,22 +128,30 @@
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ColumnNumHabitacion, Column1, ColumnObvHabitacion, ColumnIDarea, Column2, ColumnObvArea, ColumnFecha });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.Location = new Point(289, 68);
             dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(229, 217, 182);
-            dataGridViewCellStyle2.Font = new Font("Gill Sans MT", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(13, 13, 13);
-            dataGridViewCellStyle2.SelectionForeColor = Color.White;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(229, 217, 182);
+            dataGridViewCellStyle3.Font = new Font("Gill Sans MT", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(13, 13, 13);
+            dataGridViewCellStyle3.SelectionForeColor = Color.White;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.Size = new Size(983, 289);
-            dataGridView1.TabIndex = 7;
+            dataGridView1.TabIndex = 30;
             // 
             // ColumnNumHabitacion
             // 
@@ -200,13 +212,13 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Arial Narrow", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Font = new Font("Microsoft Sans Serif", 9.749998F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(190, 158, 68);
-            label3.Location = new Point(36, 218);
+            label3.Location = new Point(23, 219);
             label3.Name = "label3";
-            label3.Size = new Size(42, 16);
+            label3.Size = new Size(190, 16);
             label3.TabIndex = 13;
-            label3.Text = "AREAS";
+            label3.Text = "OBSERVACIONES AREAS";
             // 
             // FormInspeccion
             // 

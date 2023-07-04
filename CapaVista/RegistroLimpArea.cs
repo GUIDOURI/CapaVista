@@ -150,5 +150,10 @@ namespace CapaVista
         {
 
         }
+
+        private void CbxUbicacion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -84,16 +84,31 @@ namespace CapaVista
         private void ComboBoxCargarNroHabitaciones()
         {
             IList<Limpieza> habitacions = new NegocioLimpieza().ListarTablaLimpieza();
-            ComunesVista.CargarDatosComoBox<Limpieza>(comboBoxNumHabitacion, habitacions, "Id", "Observaciones", "--Seleccione habitacion--");
+            ComunesVista.CargarDatosComoBox<Limpieza>(comboBoxNumHabitacion, habitacions, "Id", "Observaciones", "--Seleccione la observacion--");
         }
 
         private void ComboBoxCargarUbicaciones()
         {
             IList<LimpiezaArea> ubicaciones = new NegocioLimpiezaArea().ListarTablaLimpieza();
-            ComunesVista.CargarDatosComoBox<LimpiezaArea>(comboBoxIDarea, ubicaciones, "Id", "Observacion", "--Seleccione ubicación--");
+            ComunesVista.CargarDatosComoBox<LimpiezaArea>(comboBoxIDarea, ubicaciones, "Id", "Observacion", "--Seleccione la observacion--");
         }
 
         private void comboBoxNumHabitacion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxIDarea_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnRegLimpiezaArea_Click(object sender, EventArgs e)
         {
 
         }

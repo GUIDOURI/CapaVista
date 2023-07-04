@@ -94,6 +94,7 @@
             CbxUbicacion.Name = "CbxUbicacion";
             CbxUbicacion.Size = new Size(195, 23);
             CbxUbicacion.TabIndex = 37;
+            CbxUbicacion.SelectedIndexChanged += CbxUbicacion_SelectedIndexChanged;
             // 
             // txtObservaciones
             // 
