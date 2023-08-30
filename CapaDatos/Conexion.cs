@@ -59,7 +59,16 @@ namespace CapaDatos
 
             using (MySqlCommand command = new MySqlCommand(query, conexion))
             {
-               
+                command.Parameters.AddWithValue("@idHabitacion", idHabitacion);
+                command.Parameters.AddWithValue("@fecha", fecha);
+                command.Parameters.AddWithValue("@estado", estado);
+                command.Parameters.AddWithValue("@observaciones", observaciones);
+                command.Parameters.AddWithValue("@idInventario", idInventario);
+                command.Parameters.AddWithValue("@idUsuario", idUsuario);
+
+                AbrirConexion();
+                command.ExecuteNonQuery();
+                CerrarConexion();
             }
         }
     }
